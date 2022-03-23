@@ -12,10 +12,14 @@
         android:layout_height="match_parent">
 
         <LinearLayout
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             android:id="@+id/linealayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:ignore="MissingConstraints">
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvStory"
                 android:layout_width="match_parent"
@@ -23,7 +27,8 @@
                 android:orientation="horizontal"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintVertical_bias="0.3"
-                tools:ignore="MissingConstraints" />
+                tools:ignore="MissingConstraints"
+                tools:listitem="@layout/item_rv_stories" />
         </LinearLayout>
 
        <LinearLayout
@@ -34,6 +39,7 @@
            tools:ignore="MissingConstraints">
            <androidx.recyclerview.widget.RecyclerView
                android:id="@+id/rvHistoryChat"
+               tools:listitem="@layout/item_rv_history_chat"
                android:layout_width="match_parent"
                android:layout_height="match_parent"
                android:orientation="vertical"

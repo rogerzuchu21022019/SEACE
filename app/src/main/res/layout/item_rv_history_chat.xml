@@ -12,13 +12,14 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
+        android:padding="@dimen/_20sdp"
         android:layout_height="wrap_content">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/civStory"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@{history.avatarUser}"
+            android:src="@mipmap/ic_launcher"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.1"
@@ -32,7 +33,7 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:text="@{history.userName}"
+            android:text="@{history.userName,default=`nam`}"
             app:layout_constraintBottom_toBottomOf="@id/civStory"
             app:layout_constraintStart_toEndOf="@id/civStory"
             app:layout_constraintTop_toTopOf="@id/civStory"
@@ -45,7 +46,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="5dp"
-            android:text="@{history.contentChat}"
+            android:text="@{history.contentChat,default=`ok la`}"
             app:layout_constraintStart_toEndOf="@id/civStory"
             app:layout_constraintTop_toBottomOf="@id/tvUserName"
             tools:ignore="MissingConstraints" />

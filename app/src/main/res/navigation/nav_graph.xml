@@ -8,6 +8,6 @@
     <fragment
         android:id="@+id/messChatFM"
         tools:layout="@layout/fragment_mess_chat"
-        android:name="team.hacker.seace.fragments.history.HistoryChatFM"
+        android:name="team.hacker.seace.fragments.message.history.HistoryChatFM"
         android:label="MessChatFM" />
 </navigation>

@@ -1,4 +1,4 @@
-package team.hacker.seace.fragments.history
+package team.hacker.seace.fragments.message.history
 
 import android.os.Bundle
 import android.view.LayoutInflater

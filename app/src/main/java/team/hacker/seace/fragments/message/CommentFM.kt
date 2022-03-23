@@ -1,4 +1,4 @@
-package team.hacker.seace.fragments
+package team.hacker.seace.fragments.message
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

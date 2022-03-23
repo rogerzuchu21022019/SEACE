@@ -9,13 +9,13 @@ import androidx.fragment.app.Fragment
 import team.hacker.seace.databinding.FragmentPeopleListBinding
 
 class PeopleListFragment : Fragment() {
-private lateinit var fmPeopleListBinding: FragmentPeopleListBinding
+    private lateinit var fmPeopleListBinding: FragmentPeopleListBinding
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        fmPeopleListBinding= FragmentPeopleListBinding.inflate(layoutInflater)
+        fmPeopleListBinding = FragmentPeopleListBinding.inflate(layoutInflater)
 
         return fmPeopleListBinding.root
     }
