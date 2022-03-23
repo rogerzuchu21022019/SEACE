@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="10dp"
+            android:weightSum="4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+
+
+                <ImageView
+                    android:id="@+id/ivAvatar"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10sp"
+                    android:src="@drawable/img_avata_user"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Stories"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    tools:ignore="MissingConstraints" />
+            </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/ivStories1"
+
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="96dp"
+            android:src="@drawable/img_stories"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_add_stories"
+            app:layout_constraintStart_toStartOf="@+id/ivStories1"
+            app:layout_constraintTop_toTopOf="@+id/ivStories1"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="172dp"
+            android:text="Add to story"
+            app:layout_constraintStart_toStartOf="@+id/ivStories1"
+            app:layout_constraintTop_toTopOf="@+id/ivStories1"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/ivStories2"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="36dp"
+            android:src="@drawable/img_stories"
+            app:layout_constraintStart_toEndOf="@+id/ivStories1"
+            app:layout_constraintTop_toTopOf="@+id/ivStories1"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="172dp"
+            android:text="Martha Craig"
+            app:layout_constraintStart_toStartOf="@+id/ivStories2"
+            app:layout_constraintTop_toTopOf="@+id/ivStories2"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/ivStories3"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="344dp"
+            android:src="@drawable/img_stories"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="172dp"
+            android:text="Martha Craig"
+            app:layout_constraintStart_toStartOf="@+id/ivStories3"
+            app:layout_constraintTop_toTopOf="@+id/ivStories3"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/ivStories4"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="36dp"
+            android:src="@drawable/img_stories"
+            app:layout_constraintStart_toEndOf="@+id/ivStories3"
+            app:layout_constraintTop_toTopOf="@+id/ivStories3"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="172dp"
+            android:text="Martha Craig"
+            app:layout_constraintStart_toStartOf="@+id/ivStories4"
+            app:layout_constraintTop_toTopOf="@+id/ivStories4"
+            tools:ignore="MissingConstraints" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civAvatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_avata_user" />
+
+            <TextView
+                android:id="@+id/tvUserNameComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:textSize="@dimen/_22sdp"
+                android:text="Nguyễn Hoàng"
+                app:layout_constraintBottom_toBottomOf="@id/civAvatar"
+                app:layout_constraintStart_toEndOf="@id/civAvatar"
+                app:layout_constraintTop_toTopOf="@id/civAvatar"
+                app:layout_constraintVertical_bias="0.5" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl2"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/_50sdp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/cl1"
+            app:layout_constraintTop_toBottomOf="@id/cl1"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/tvComment"
+                android:textSize="@dimen/_20sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="comment" />
+
+            <TextView
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:id="@+id/tvTime"
+                android:textSize="@dimen/_16sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10 giờ"
+                app:layout_constraintStart_toStartOf="@id/tvComment"
+                app:layout_constraintTop_toBottomOf="@id/tvComment" />
+
+            <TextView
+                android:id="@+id/tvLike"
+                android:textSize="@dimen/_16sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Like"
+                android:layout_marginLeft="@dimen/_40sdp"
+                app:layout_constraintStart_toEndOf="@+id/tvTime"
+                app:layout_constraintTop_toBottomOf="@id/tvComment" />
+
+            <TextView
+                android:id="@+id/tvRepost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Repost"
+                android:textSize="@dimen/_16sdp"
+                android:layout_marginLeft="@dimen/_40sdp"
+                app:layout_constraintStart_toEndOf="@+id/tvLike"
+                app:layout_constraintTop_toBottomOf="@id/tvComment" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

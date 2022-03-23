@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/ChatListFragment">
+
+
+    <fragment
+        android:id="@+id/ChatListFragment"
+        android:name="team.hacker.seace.fragments.chats.ChatListFragment"
+        android:label="ChatListFragment"
+        tools:layout="@layout/fragment_chat_list">
+        <action
+            android:id="@+id/action_ChatListFragment_to_ChatSubFragment"
+            app:destination="@id/ChatSubFragment" />
+        <action
+            android:id="@+id/action_ChatListFragment_to_ProfileMeFragment"
+            app:destination="@id/ProfileMeFragment" />
+        <action
+            android:id="@+id/action_ChatListFragment_to_ProfileFriendFragment"
+            app:destination="@id/ProfileFriendFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ChatSubFragment"
+        android:name="team.hacker.seace.fragments.chats.ChatSubFragment"
+        android:label="ChatSubFragment"
+        tools:layout="@layout/fragment_stories_list">
+        <action
+            android:id="@+id/action_ChatSubFragment_to_ProfileFriendFragment"
+            app:destination="@id/ProfileFriendFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/CallListFragment"
+        android:name="team.hacker.seace.fragments.calls.CallListFragment"
+        android:label="CallListFragment"
+        tools:layout="@layout/fragment_call_list">
+        <action
+            android:id="@+id/action_CallListFragment_to_CallVideoFragment"
+            app:destination="@id/CallVideoFragment" />
+        <action
+            android:id="@+id/action_CallListFragment_to_CallAudiolFragment"
+            app:destination="@id/CallAudiolFragment" />
+        <action
+            android:id="@+id/action_CallListFragment_to_ProfileFriendFragment"
+            app:destination="@id/ProfileFriendFragment" />
+        <action
+            android:id="@+id/action_CallListFragment_to_ProfileMeFragment"
+            app:destination="@id/ProfileMeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/CallAudiolFragment"
+        android:name="team.hacker.seace.fragments.calls.CallAudiolFragment"
+        android:label="CallAudiolFragment"
+        tools:layout="@layout/fragment_call_list"/>
+    <fragment
+        android:id="@+id/CallVideoFragment"
+        android:name="team.hacker.seace.fragments.calls.CallVideoFragment"
+        android:label="CallVideoFragment"
+        tools:layout="@layout/fragment_call_list"/>
+
+
+    <fragment
+        android:id="@+id/PeopleListFragment"
+        android:name="team.hacker.seace.fragments.people.PeopleListFragment"
+        android:label="PeopleListFragment"
+        tools:layout="@layout/fragment_people_list">
+        <action
+            android:id="@+id/action_PeopleListFragment_to_ProfileFriendFragment"
+            app:destination="@id/ProfileFriendFragment" />
+        <action
+            android:id="@+id/action_PeopleListFragment_to_ProfileMeFragment"
+            app:destination="@id/ProfileMeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ProfileFriendFragment"
+        android:name="team.hacker.seace.fragments.profile.ProfileFriendFragment"
+        android:label="ProfileFriendFragment"
+        tools:layout="@layout/fragment_stories_list">
+
+    </fragment>
+    <fragment
+        android:id="@+id/ProfileMeFragment"
+        android:name="team.hacker.seace.fragments.profile.ProfileMeFragment"
+        android:label="ProfileMeFragment"
+        tools:layout="@layout/fragment_stories_list">
+
+    </fragment>
+    <fragment
+        android:id="@+id/StoriesListFragment"
+        android:name="team.hacker.seace.fragments.stories.StoriesListFragment"
+        android:label="StoriesListFragment"
+        tools:layout="@layout/fragment_stories_list">
+
+    </fragment>
+
+</navigation>
