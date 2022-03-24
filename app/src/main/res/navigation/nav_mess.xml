@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/chatFM">
+    app:startDestination="@id/historyChatFM2">
 
     <fragment
         android:id="@+id/chatFM"
         tools:layout="@layout/fragment_chat"
-        android:name="team.hacker.seace.fragments.message.calls.chats.ChatFM"
+        android:name="team.hacker.seace.fragments.message.chats.ChatFM"
         android:label="ChatFM" >
         <action
             android:id="@+id/action_chatFM_to_callAudiolFragment"
@@ -16,9 +16,7 @@
         <action
             android:id="@+id/action_chatFM_to_callVideoFragment"
             app:destination="@id/callVideoFragment" />
-        <action
-            android:id="@+id/action_chatFM_to_peopleListFragment"
-            app:destination="@id/peopleListFragment" />
+
     </fragment>
     <fragment
 
@@ -36,11 +34,7 @@
         tools:layout="@layout/fragment_call_video"
         android:name="team.hacker.seace.fragments.message.calls.CallVideoFragment"
         android:label="CallVideoFragment" />
-    <fragment
-        android:id="@+id/peopleListFragment"
-        tools:layout="@layout/fragment_profile_me"
-        android:name="team.hacker.seace.fragments.people.PeopleListFragment"
-        android:label="PeopleListFragment" />
+
     <fragment
         android:id="@+id/historyChatFM2"
         tools:layout="@layout/fragment_mess_chat"

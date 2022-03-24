@@ -1,4 +1,4 @@
-package team.hacker.seace.fragments.message.calls.chats
+package team.hacker.seace.fragments.message.chats
 
 import android.os.Bundle
 import android.view.LayoutInflater

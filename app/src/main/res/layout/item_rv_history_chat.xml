@@ -5,9 +5,13 @@
 
     <data>
 
+
         <variable
-            name="history"
-            type="team.hacker.seace.models.HistoryChatModel" />
+            name="user"
+            type="team.hacker.seace.models.users.UserItem" />
+        <variable
+            name="comment"
+            type="team.hacker.seace.models.comments.CommentItem" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -33,7 +37,7 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:text="@{history.userName,default=`nam`}"
+            android:text="@{user.fullname,default=`nam`}"
             app:layout_constraintBottom_toBottomOf="@id/civStory"
             app:layout_constraintStart_toEndOf="@id/civStory"
             app:layout_constraintTop_toTopOf="@id/civStory"
@@ -46,7 +50,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="5dp"
-            android:text="@{history.contentChat,default=`ok la`}"
+            android:text="@{comment.contentComment}"
             app:layout_constraintStart_toEndOf="@id/civStory"
             app:layout_constraintTop_toBottomOf="@id/tvUserName"
             tools:ignore="MissingConstraints" />

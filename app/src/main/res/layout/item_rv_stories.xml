@@ -2,6 +2,11 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="story"
+            type="team.hacker.seace.models.stories.StoryItem" />
+    </data>
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -42,20 +47,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_5sdp"
-                android:text="namzuchu"
+                android:text="@{story.idUser,default=`namzuchu`}"
                 app:layout_constraintTop_toBottomOf="@id/civAvatar"
                 tools:ignore="MissingConstraints" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <TextView
-            android:id="@+id/tvContentPost"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_20sdp"
-            app:layout_constraintStart_toStartOf="@id/cl1"
-            app:layout_constraintTop_toBottomOf="@id/cl1"
-            tools:ignore="MissingConstraints" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
