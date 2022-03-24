@@ -13,7 +13,7 @@
         android:layout_width="409dp"
         android:layout_height="729dp"
         app:defaultNavHost="true"
-        app:navGraph="@navigation/navi_graph"
+        app:navGraph="@navigation/navi_intro"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="1dp"
         tools:ignore="MissingConstraints" />
