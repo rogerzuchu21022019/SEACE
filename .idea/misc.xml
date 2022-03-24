@@ -3,7 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="../../../../../layout/custom_preview.xml" value="0.21666666666666667" />
+        <entry key="..\:/Users/QuanVP/Documents/GitHub/SEACE/app/src/main/res/layout/fragment_container_fm.xml" value="0.11302083333333333" />
+        <entry key="..\:/Users/QuanVP/Documents/GitHub/SEACE/app/src/main/res/layout/fragment_share_post.xml" value="0.14947916666666666" />
+        <entry key="..\:/Users/QuanVP/Documents/GitHub/SEACE/app/src/main/res/layout/fragment_stories_list.xml" value="0.14947916666666666" />
+        <entry key="..\:/Users/QuanVP/Documents/GitHub/SEACE/app/src/main/res/layout/item_receiver_mess.xml" value="0.14947916666666666" />
+        <entry key="..\:/Users/QuanVP/Documents/GitHub/SEACE/app/src/main/res/layout/item_rv_comment_post.xml" value="0.14947916666666666" />
+        <entry key="..\:/Users/QuanVP/Documents/GitHub/SEACE/app/src/main/res/layout/item_rv_stories.xml" value="0.14947916666666666" />
+        <entry key="..\:/Users/QuanVP/Documents/GitHub/SEACE/app/src/main/res/layout/item_send_mess.xml" value="0.14947916666666666" />
         <entry key="app/src/main/res/drawable-v24/back.xml" value="0.137" />
         <entry key="app/src/main/res/drawable/back.xml" value="0.137" />
         <entry key="app/src/main/res/drawable/mic.xml" value="0.137" />

@@ -1,0 +1,63 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="team.hacker.seace.fragments.ForgotFM">
+
+    <LinearLayout
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:text="Forgot \nPassword?"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/edtGetEmail"
+
+            android:layout_marginTop="30dp"
+            android:drawableLeft="@drawable/icon_letter"
+            android:hint="  Email address or phone number"
+            android:background="@drawable/custom_edt_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="* We will send you a message to set or reset your password  "
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_marginTop="100dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_gravity="center|left"
+                android:text="@string/send_code"
+                android:textSize="22dp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/imgNext"
+
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:scaleType="fitEnd"
+                android:src="@drawable/icon_next" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

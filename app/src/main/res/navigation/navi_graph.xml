@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navi"
+    app:startDestination="@id/sayHelloFM">
+    <fragment
+        android:id="@+id/sayHelloFM"
+        android:name="team.hacker.seace.fragments.SayHelloFM"
+        android:label="fragment_say_hello_fm"
+        tools:layout="@layout/fragment_say_hello_fm" >
+        <action
+            android:id="@+id/action_sayHelloFM_to_containerFM2"
+            app:destination="@id/containerFM2" />
+    </fragment>
+    <fragment
+        android:id="@+id/containerFM2"
+        android:name="team.hacker.seace.fragments.ContainerFM"
+        android:label="fragment_container_fm"
+        tools:layout="@layout/fragment_container_fm" >
+        <action
+            android:id="@+id/action_containerFM2_to_signInFM"
+            app:destination="@id/signInFM" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFM"
+        android:name="team.hacker.seace.fragments.RegisterFM"
+        android:label="fragment_register_fm"
+        tools:layout="@layout/fragment_register_fm" >
+        <action
+            android:id="@+id/action_registerFM_to_signInFM"
+            app:destination="@id/signInFM" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFM"
+        android:name="team.hacker.seace.fragments.SignInFM"
+        android:label="fragment_sign_in_fm"
+        tools:layout="@layout/fragment_sign_in_fm" >
+        <action
+            android:id="@+id/action_signInFM_to_registerFM"
+            app:destination="@id/registerFM" />
+        <action
+            android:id="@+id/action_signInFM_to_forgotFM"
+            app:destination="@id/forgotFM" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotFM"
+        android:name="team.hacker.seace.fragments.ForgotFM"
+        android:label="fragment_forgot_fm"
+        tools:layout="@layout/fragment_forgot_fm" >
+        <action
+            android:id="@+id/action_forgotFM_to_signInFM"
+            app:destination="@id/signInFM" />
+    </fragment>
+</navigation>

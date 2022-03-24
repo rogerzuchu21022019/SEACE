@@ -1,0 +1,26 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="team.hacker.seace.fragments.Intro2FM">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="358dp"
+            android:scaleType="fitEnd"
+            android:src="@drawable/img_intro2" />
+
+        <TextView
+            android:text="Seace language opened up the world of travel and communication with"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_marginTop="250dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</FrameLayout>
