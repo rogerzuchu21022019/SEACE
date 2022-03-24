@@ -6,12 +6,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import team.hacker.seace.R
+import team.hacker.seace.databinding.FragmentSignInFmBinding
 
 class SignInFM : Fragment() {
+    lateinit var signInFmBinding: FragmentSignInFmBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_sign_in_fm, container, false)
     }

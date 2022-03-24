@@ -12,13 +12,11 @@ import team.hacker.seace.databinding.FragmentIntro3FmBinding
 
 class Intro3FM : Fragment() {
     lateinit var intro3FmBinding: FragmentIntro3FmBinding
-    lateinit var naviController: NavController
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        naviController = findNavController()
         intro3FmBinding = FragmentIntro3FmBinding.inflate(layoutInflater)
 
         return intro3FmBinding.root
