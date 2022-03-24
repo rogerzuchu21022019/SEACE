@@ -3,8 +3,8 @@ package team.hacker.seace.adapters
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import team.hacker.seace.models.HistoryChatModel
 import team.hacker.seace.databinding.ItemRvHistoryChatBinding
+import team.hacker.seace.models.HistoryChatModel
 import team.hacker.seace.models.comments.CommentItem
 import team.hacker.seace.models.users.UserItem
 

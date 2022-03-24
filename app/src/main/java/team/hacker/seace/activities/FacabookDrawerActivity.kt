@@ -7,12 +7,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
 import team.hacker.seace.R
-import team.hacker.seace.networks.API
-import team.hacker.seace.networks.APIService
 
 
 class FacabookDrawerActivity : AppCompatActivity() {

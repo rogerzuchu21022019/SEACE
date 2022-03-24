@@ -7,10 +7,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
-import team.hacker.seace.models.Message
 import team.hacker.seace.R
 import team.hacker.seace.databinding.ItemReceiverMessBinding
 import team.hacker.seace.databinding.ItemSendMessBinding
+import team.hacker.seace.models.Message
 
 class MessageAdapter(var context:Context,
                      listMessages:ArrayList<Message>,
