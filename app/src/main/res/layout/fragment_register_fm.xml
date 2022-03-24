@@ -76,8 +76,8 @@
 
 
         <Button
-            android:id="@+id/btnLogin"
-            android:text="Sign in"
+            android:id="@+id/btnSignUp"
+            android:text="Sign up"
             android:textSize="20dp"
             android:background="@drawable/custom_btn_signin"
             app:backgroundTint="@null"
