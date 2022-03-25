@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.HomeScreenFM">
+
+    <RelativeLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/txtTitle"
+            android:text="SEACE"
+            android:textColor="#CB08E1"
+            android:textSize="@dimen/_30sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        // Post
+        <LinearLayout
+            android:id="@+id/llPost"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal"
+            android:layout_below="@+id/txtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/ivAvatar"
+                android:src="@drawable/icon_say_hello_128"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"/>
+            <EditText
+                android:id="@+id/edtContent"
+                android:hint="What’s on your mind?"
+                android:textSize="@dimen/_18sdp"
+                android:layout_weight="6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+            <ImageView
+                android:id="@+id/ivChoiceImg"
+                android:layout_weight="1"
+                android:src="@drawable/icon_choice_img"
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"/>
+        </LinearLayout>
+
+        // Story
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvStory"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:layout_below="@id/llPost"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"/>
+
+        // Information
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvPostContent"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/rcvStory"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_230sdp"/>
+
+        // Status for post
+        <LinearLayout
+            android:id="@+id/llStatusForPost"
+            android:layout_below="@id/rcvPostContent"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp">
+            <Button
+                android:id="@+id/btnLike"
+                android:drawableLeft="@drawable/icon_like"
+                android:text="Thích"
+                android:backgroundTint="#8BC34A"
+                android:textSize="@dimen/_8sdp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+            <Button
+                android:id="@+id/btnCommnent"
+                android:drawableLeft="@drawable/icon_comment"
+                android:text="Bình luận"
+                android:layout_weight="1"
+                android:textSize="@dimen/_8sdp"
+                android:backgroundTint="#8BC34A"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+            <Button
+                android:id="@+id/btnShare"
+                android:backgroundTint="#8BC34A"
+                android:text="Chia sẻ"
+                android:textSize="@dimen/_8sdp"
+                android:drawableLeft="@drawable/icon_share"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        // bottom nav
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/tlFooter"
+            android:layout_alignParentBottom="true"
+            app:menu="@menu/bottom_menu_home"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"/>
+    </RelativeLayout>
+</FrameLayout>
