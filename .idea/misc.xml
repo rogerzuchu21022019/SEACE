@@ -6,9 +6,19 @@
         <entry key="../../../../../layout/custom_preview.xml" value="0.21666666666666667" />
         <entry key="..\:/Users/QuanVP/Documents/GitHub/SEACE/app/src/main/res/layout/fragment_forgot_fm.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/QuanVP/Documents/GitHub/SEACE/app/src/main/res/layout/fragment_home_screen_fm.xml" value="0.264" />
+        <entry key="..\:/Users/QuanVP/Documents/GitHub/SEACE/app/src/main/res/layout/fragment_intro1_fm.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/QuanVP/Documents/GitHub/SEACE/app/src/main/res/layout/fragment_intro2_fm.xml" value="0.14947916666666666" />
+        <entry key="..\:/Users/QuanVP/Documents/GitHub/SEACE/app/src/main/res/layout/fragment_intro3_fm.xml" value="0.14947916666666666" />
+        <entry key="..\:/Users/QuanVP/Documents/GitHub/SEACE/app/src/main/res/layout/fragment_profile_friend.xml" value="0.14947916666666666" />
+        <entry key="..\:/Users/QuanVP/Documents/GitHub/SEACE/app/src/main/res/layout/fragment_profile_me.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/QuanVP/Documents/GitHub/SEACE/app/src/main/res/layout/fragment_profile_user_fm.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/QuanVP/Documents/GitHub/SEACE/app/src/main/res/layout/fragment_register_fm.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/QuanVP/Documents/GitHub/SEACE/app/src/main/res/layout/fragment_sign_in_fm.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/QuanVP/Documents/GitHub/SEACE/app/src/main/res/layout/item_home_screen.xml" value="0.264" />
+        <entry key="..\:/Users/QuanVP/Documents/GitHub/SEACE/app/src/main/res/layout/item_receiver_mess.xml" value="0.14947916666666666" />
+        <entry key="..\:/Users/QuanVP/Documents/GitHub/SEACE/app/src/main/res/layout/item_rv_post.xml" value="0.2" />
+        <entry key="..\:/Users/QuanVP/Documents/GitHub/SEACE/app/src/main/res/layout/item_rv_stories.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/QuanVP/Documents/GitHub/SEACE/app/src/main/res/layout/item_send_mess.xml" value="0.14947916666666666" />
         <entry key="..\:/Users/QuanVP/Documents/GitHub/SEACE/app/src/main/res/menu/bottom_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/QuanVP/Documents/GitHub/SEACE/app/src/main/res/menu/bottom_menu_home.xml" value="0.1484375" />
         <entry key="app/src/main/res/drawable-v24/back.xml" value="0.137" />

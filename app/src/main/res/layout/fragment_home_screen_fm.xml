@@ -46,13 +46,18 @@
                 android:layout_width="0dp"
                 android:layout_height="@dimen/_30sdp"/>
         </LinearLayout>
-
+        <Button
+            android:id="@+id/btnPost"
+            android:layout_below="@id/llPost"
+            android:text="Đăng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
         // Story
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rcvStory"
             android:layout_marginTop="20dp"
             android:orientation="horizontal"
-            android:layout_below="@id/llPost"
+            android:layout_below="@id/btnPost"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_100sdp"/>
 
@@ -64,43 +69,6 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/_230sdp"/>
 
-        // Status for post
-        <LinearLayout
-            android:id="@+id/llStatusForPost"
-            android:layout_below="@id/rcvPostContent"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_30sdp">
-            <Button
-                android:id="@+id/btnLike"
-                android:drawableLeft="@drawable/icon_like"
-                android:text="Thích"
-                android:backgroundTint="#8BC34A"
-                android:textSize="@dimen/_8sdp"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"/>
-            <Button
-                android:id="@+id/btnCommnent"
-                android:drawableLeft="@drawable/icon_comment"
-                android:text="Bình luận"
-                android:layout_weight="1"
-                android:textSize="@dimen/_8sdp"
-                android:backgroundTint="#8BC34A"
-                android:layout_marginStart="@dimen/_5sdp"
-                android:layout_marginEnd="@dimen/_5sdp"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"/>
-            <Button
-                android:id="@+id/btnShare"
-                android:backgroundTint="#8BC34A"
-                android:text="Chia sẻ"
-                android:textSize="@dimen/_8sdp"
-                android:drawableLeft="@drawable/icon_share"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"/>
-        </LinearLayout>
 
         // bottom nav
         <com.google.android.material.bottomnavigation.BottomNavigationView
