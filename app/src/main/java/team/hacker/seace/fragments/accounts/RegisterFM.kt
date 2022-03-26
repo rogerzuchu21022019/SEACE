@@ -18,7 +18,7 @@ class RegisterFM : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         registerFmBinding = FragmentRegisterFmBinding.inflate(layoutInflater)
-        registerFmBinding.btnSignUp.setOnClickListener{
+        registerFmBinding.lavAdd.setOnClickListener{
             navController = findNavController()
             var action = RegisterFMDirections.actionRegisterFMToSignInFM()
             navController.navigate(action)
