@@ -6,18 +6,27 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavController
+import androidx.navigation.NavDirections
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.NavigationUI
+import androidx.recyclerview.widget.RecyclerView
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
 import team.hacker.seace.adapters.HistoryChatAdapter
+import team.hacker.seace.adapters.StoriesInHistoryChatAdapter
 import team.hacker.seace.databinding.FragmentMessChatBinding
 import team.hacker.seace.networks.API
 import team.hacker.seace.networks.APIService
 
 class HistoryChatFM : Fragment() {
     lateinit var fmMessChat: FragmentMessChatBinding
-    lateinit var adapter: HistoryChatAdapter
+    private lateinit var adapter: HistoryChatAdapter
+    lateinit var adapterStories: StoriesInHistoryChatAdapter
+    lateinit var navController: NavController
 
     var apiService: APIService = API.getAPI().create(APIService::class.java)
 
@@ -28,36 +37,54 @@ class HistoryChatFM : Fragment() {
     ): View? {
         fmMessChat = FragmentMessChatBinding.inflate(layoutInflater)
         initRecyclerView()
-        GetAllUsers()
+        initNavController()
+        NavigationUI.setupWithNavController(fmMessChat.navBot, navController)
+        getAllUsers()
+        getAllStories()
+        initClick()
         return fmMessChat.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
-
+    private fun initClick() {
+        fmMessChat.fabNext.setOnClickListener {
+            var aciton: NavDirections = HistoryChatFMDirections.actionBotChatToChatFM()
+            navController.navigate(aciton)
+        }
     }
 
-    private fun GetAllUsers() {
+    private fun initNavController() {
+        navController = findNavController()
+    }
+
+
+    private fun getAllUsers() {
         GlobalScope.launch(Dispatchers.Main) {
             val response = apiService.getAllUsers()
             val responseComment = apiService.getAllComments()
             if (response.isSuccessful) {
                 for (data in response.body()!!) {
-                    adapter.setDataForAdapter(response.body()!!,responseComment.body()!!)
-//                    adapter.setDataForAdapter(responseComment.body()!!)
+                    adapter.setDataForAdapter(response.body()!!, responseComment.body()!!)
 
                 }
             }
 
-//            var response = apiService.createNewUser(
-//                address = "Q12",
-//                age = 20,
-//                avatar = "abcxyz",
-//                email = "namzuchu@gmail.com",
-//                fullname = "Vu Thanh Nam",
-//                phone = "0990",
-//                job = "IT",
-//                password = "ok"
+//            )
+
+        }
+    }
+
+    private fun getAllStories() {
+        GlobalScope.launch(Dispatchers.Main) {
+            val response = apiService.getAllStories()
+            val responseUsers = apiService.getAllUsers()
+
+            if (response.isSuccessful) {
+                for (data in response.body()!!) {
+                    adapterStories.setDataForAdapter(response.body()!!,responseUsers.body()!!)
+
+                }
+            }
+
 //            )
 
         }
@@ -66,7 +93,9 @@ class HistoryChatFM : Fragment() {
 
     private fun initRecyclerView() {
         adapter = HistoryChatAdapter()
-        fmMessChat.rvStory.adapter = adapter
+        adapterStories = StoriesInHistoryChatAdapter()
+
+        fmMessChat.rvStory.adapter = adapterStories
         fmMessChat.rvHistoryChat.adapter = adapter
 
     }

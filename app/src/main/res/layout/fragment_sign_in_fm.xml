@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="team.hacker.seace.fragments.SignInFM">
+    tools:context="team.hacker.seace.fragments.accounts.SignInFM">
 
     <LinearLayout
         android:orientation="vertical"
@@ -32,58 +32,90 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
-        <EditText
-            android:id="@+id/edtUsername"
-            android:hint="Email address or phone number"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:paddingStart="30dp"
-            android:paddingEnd="40dp"
-            android:background="@drawable/custom_edt_login"
-            android:textSize="22sp"
-            android:layout_marginTop="50dp"
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="@dimen/_20sdp"
+            android:id="@+id/tilEmailLogin"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusTopEnd="@dimen/_20sdp"
+            app:boxCornerRadiusBottomEnd="@dimen/_20sdp"
+            app:boxCornerRadiusBottomStart="@dimen/_20sdp"
+            app:boxCornerRadiusTopStart="@dimen/_20sdp"
+            app:counterEnabled="true"
+            app:counterMaxLength="50"
+            app:endIconMode="clear_text"
+            app:helperText="@string/require"
+            app:helperTextEnabled="true"
+            app:helperTextTextColor="@color/red"
+            tools:ignore="MissingConstraints">
 
-        <EditText
-            android:id="@+id/edtPassword"
-            android:hint="Password"
-            app:passwordToggleEnabled="true"
-            android:inputType="textPassword"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:paddingStart="30dp"
-            android:paddingEnd="50dp"
-            android:background="@drawable/custom_edt_login"
-            android:textSize="22sp"
-            android:layout_marginTop="10dp"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tieEmailLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="PressEmail"
+                android:textColor="@color/red"
+                android:textColorHint="@color/red"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constrainmain"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
 
-        <LinearLayout
+            android:layout_marginEnd="40dp"
             android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:id="@+id/txtRegister"
-                android:layout_weight="1"
-                android:text="@string/register"
-                android:paddingStart="10dp"
-                android:layout_marginTop="5dp"
-                android:textSize="22sp"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:id="@+id/txtForgotPassword"
-                android:layout_weight="1"
-                android:layout_marginTop="5dp"
-                android:text="@string/forgot_password"
-                android:paddingEnd="10dp"
-                android:gravity="right"
-                android:textSize="22sp"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
+            app:layout_constraintEnd_toEndOf="@+id/tilEmailLogin"
+            app:layout_constraintStart_toStartOf="@id/tilEmailLogin"
+            app:layout_constraintTop_toBottomOf="@id/tilEmailLogin"
+            tools:ignore="NotSibling">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:id="@+id/tilPassWord"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="true"
+                app:boxBackgroundMode="outline"
+                app:counterEnabled="true"
+                app:boxCornerRadiusTopStart="@dimen/_20sdp"
+                app:boxCornerRadiusBottomEnd="@dimen/_20sdp"
+                app:boxCornerRadiusBottomStart="@dimen/_20sdp"
+                app:boxCornerRadiusTopEnd="@dimen/_20sdp"
+                app:counterMaxLength="50"
+                app:endIconCheckable="true"
+                app:endIconMode="password_toggle"
+                app:errorEnabled="true"
+                app:helperText="@string/require"
+                app:helperTextEnabled="true"
+                app:helperTextTextColor="@color/red"
+
+                tools:ignore="MissingConstraints">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tiePassWord"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Press Password"
+                    android:inputType="textPassword"
+                    android:textColor="@color/red"
+                    android:textColorHint="@color/red"
+                    android:textSize="16sp"
+                    app:textInputLayoutFocusedRectEnabled="false"
+                    tools:ignore="ContentDescription" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
         <ImageView
             android:id="@+id/imgFinger"

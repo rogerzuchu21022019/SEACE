@@ -84,26 +84,18 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvSender"
+        app:layout_constraintBottom_toTopOf="@id/layoutToolChat"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="0dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintTop_toBottomOf="@id/layoutToolCall"
         tools:ignore="MissingConstraints"
         tools:listitem="@layout/item_send_mess" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvReceiver"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintTop_toBottomOf="@id/rvSender"
-        app:layout_constraintBottom_toTopOf="@id/layoutToolChat"
-        tools:ignore="MissingConstraints"
-        tools:listitem="@layout/item_receiver_mess" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layoutToolChat"
         android:layout_width="match_parent"
+        android:layout_marginBottom="?attr/actionBarSize"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="MissingConstraints">

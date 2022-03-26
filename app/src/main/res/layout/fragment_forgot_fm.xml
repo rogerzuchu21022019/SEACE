@@ -2,7 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="team.hacker.seace.fragments.ForgotFM">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="team.hacker.seace.fragments.accounts.ForgotFM">
 
     <LinearLayout
         android:layout_marginStart="15dp"
@@ -18,18 +19,45 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
-        <EditText
-            android:id="@+id/edtGetEmail"
-
-            android:layout_marginTop="30dp"
-            android:drawableLeft="@drawable/icon_letter"
-            android:hint="  Email address or phone number"
-            android:background="@drawable/custom_edt_login"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilResetEmail"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:boxBackgroundMode="outline"
+            app:counterEnabled="true"
+            app:counterMaxLength="50"
+            app:endIconMode="clear_text"
+            app:helperText="@string/require"
+            app:helperTextEnabled="true"
+            app:helperTextTextColor="@color/red"
+            app:boxCornerRadiusBottomEnd="@dimen/_25sdp"
+            app:boxCornerRadiusBottomStart="@dimen/_25sdp"
+            app:boxCornerRadiusTopEnd="@dimen/_25sdp"
+            app:boxCornerRadiusTopStart="@dimen/_25sdp"
+            tools:ignore="MissingConstraints">
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:id="@+id/tieResetEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Please press your email"
+                android:imeOptions="actionGo"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/red"
+                android:textColorHint="@color/red"
+                android:textSize="16sp"
+                app:textInputLayoutFocusedRectEnabled="false" />
+        </com.google.android.material.textfield.TextInputLayout>
+
 
         <TextView
-            android:text="* We will send you a message to set or reset your password  "
+            android:text="@string/introduce_password"
             android:layout_marginTop="10dp"
             android:textSize="18sp"
             android:layout_width="match_parent"

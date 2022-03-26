@@ -5,6 +5,7 @@
         android:centerColor="#7D4DD3"
         android:endColor="#7D4DD3"
         android:angle="90"/>
+
     <padding android:left="7dp"
         android:top="7dp"
         android:right="7dp"
@@ -12,5 +13,5 @@
     <stroke
         android:width="2dip"
         android:color="#FFFFFF" />
-    <corners android:radius= "10dp" />
+    <corners android:radius= "@dimen/_25sdp" />
 </shape>

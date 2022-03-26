@@ -6,19 +6,22 @@ import androidx.recyclerview.widget.RecyclerView
 import team.hacker.seace.databinding.ItemRvStoriesBinding
 
 import team.hacker.seace.models.stories.StoryItem
+import team.hacker.seace.models.users.UserItem
 
-class StoriesInHistoryChatAdapter : RecyclerView.Adapter<StoriesInHistoryChatAdapter.HistoryViewHolder>() {
+class StoriesInHistoryChatAdapter :
+    RecyclerView.Adapter<StoriesInHistoryChatAdapter.HistoryViewHolder>() {
     private var listStories: List<StoryItem> = emptyList()
+    private var listUsers: List<UserItem> = emptyList()
     lateinit var layoutInflater: LayoutInflater
     lateinit var itemRvStoriesBinding: ItemRvStoriesBinding
 
     class HistoryViewHolder(itemRvStoriesBinding: ItemRvStoriesBinding) :
         RecyclerView.ViewHolder(itemRvStoriesBinding.root) {
-
     }
 
-    fun setDataForAdapter(listStories: List<StoryItem>) {
-     this.listStories = listStories
+    fun setDataForAdapter(listStories: List<StoryItem>, listUsers: List<UserItem>) {
+        this.listStories = listStories
+        this.listUsers = listUsers
         notifyDataSetChanged()
     }
 
@@ -31,6 +34,9 @@ class StoriesInHistoryChatAdapter : RecyclerView.Adapter<StoriesInHistoryChatAda
 
     override fun onBindViewHolder(holder: HistoryViewHolder, position: Int) {
         var currentStory = listStories[position]
+        var currentUser = listUsers[position]
+        itemRvStoriesBinding.user = currentUser
+        itemRvStoriesBinding.story = currentStory
     }
 
     override fun getItemCount(): Int {

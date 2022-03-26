@@ -1,92 +1,249 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="team.hacker.seace.fragments.RegisterFM">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <LinearLayout
-        android:gravity="center|top"
-        android:orientation="vertical"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <ImageView
-            android:src="@drawable/icon_say_hello_128"
-            android:layout_marginTop="20dp"
-            android:layout_width="200dp"
-            android:layout_height="200dp"/>
-        <TextView
-            android:text="Seace"
-            android:layout_marginTop="10dp"
-            android:textColor="#EB3C3535"
-            android:textSize="50sp"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
 
-        <TextView
-            android:text="Sign in with Seace to get stared"
-            android:textSize="18sp"
-            android:gravity="center"
-            android:layout_marginTop="15dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
 
-        <EditText
-            android:id="@+id/edtUsername"
-            android:hint="Email"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:paddingStart="30dp"
-            android:paddingEnd="40dp"
-            android:background="@drawable/custom_edt_login"
-            android:textSize="30sp"
-            android:layout_marginTop="50dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
 
-        <EditText
-            android:id="@+id/edtPassword"
-            android:hint="Password"
-            app:passwordToggleEnabled="true"
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lavView"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_120sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/laptop_study"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        app:boxCornerRadiusTopEnd="@dimen/_20sdp"
+
+        app:boxCornerRadiusBottomEnd="@dimen/_20sdp"
+        app:boxCornerRadiusBottomStart="@dimen/_20sdp"
+        app:boxCornerRadiusTopStart="@dimen/_20sdp"
+        android:id="@+id/tilAuto"
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        app:boxBackgroundMode="outline"
+        app:counterEnabled="true"
+        app:counterMaxLength="50"
+        app:endIconMode="clear_text"
+        app:helperText="@string/require"
+        app:helperTextEnabled="true"
+        app:helperTextTextColor="@color/red"
+        app:layout_constraintEnd_toEndOf="@id/lavView"
+        app:layout_constraintStart_toStartOf="@id/lavView"
+        app:layout_constraintTop_toBottomOf="@id/lavView"
+        app:layout_constraintVertical_bias="0.35"
+        app:passwordToggleTint="@color/white"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tieUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hapticFeedbackEnabled="true"
+            android:hint="Press UserName"
+            android:textColor="@color/red"
+            android:textColorHint="@color/red"
+            android:textSize="16sp"
+            app:textInputLayoutFocusedRectEnabled="true" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilFullName"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        app:boxBackgroundMode="outline"
+        app:counterEnabled="true"
+        app:counterMaxLength="50"
+        app:endIconMode="clear_text"
+        app:helperText="@string/require"
+        app:helperTextEnabled="true"
+        app:helperTextTextColor="@color/red"
+        app:layout_constraintTop_toBottomOf="@id/tilAuto"
+        app:boxCornerRadiusTopEnd="@dimen/_20sdp"
+        app:boxCornerRadiusBottomEnd="@dimen/_20sdp"
+        app:boxCornerRadiusBottomStart="@dimen/_20sdp"
+        app:boxCornerRadiusTopStart="@dimen/_20sdp"
+        app:layout_constraintVertical_bias="0.35"
+        app:passwordToggleTint="@color/white"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tieFullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hapticFeedbackEnabled="true"
+            android:hint="Press FullName"
+            android:inputType="textAutoCorrect"
+            android:textColor="@color/red"
+            android:textColorHint="@color/red"
+            android:textSize="16sp"
+            app:textInputLayoutFocusedRectEnabled="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPassword"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        app:boxBackgroundMode="outline"
+        app:counterEnabled="true"
+        app:counterMaxLength="50"
+        app:endIconMode="clear_text"
+        app:helperText="@string/require"
+        app:boxCornerRadiusTopEnd="@dimen/_20sdp"
+        app:boxCornerRadiusBottomEnd="@dimen/_20sdp"
+        app:boxCornerRadiusBottomStart="@dimen/_20sdp"
+        app:boxCornerRadiusTopStart="@dimen/_20sdp"
+        app:helperTextEnabled="true"
+        app:helperTextTextColor="@color/red"
+        app:layout_constraintTop_toBottomOf="@id/tilFullName"
+        app:passwordToggleTint="@color/white"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiePassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hapticFeedbackEnabled="true"
+            android:hint="Press Password"
+            android:textColor="@color/red"
+            android:textColorHint="@color/red"
             android:inputType="textPassword"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:paddingStart="30dp"
-            android:paddingEnd="50dp"
-            android:background="@drawable/custom_edt_login"
-            android:textSize="30sp"
-            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            app:textInputLayoutFocusedRectEnabled="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilEmail"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        app:boxBackgroundMode="outline"
+        app:counterEnabled="true"
+        app:counterMaxLength="50"
+        app:endIconMode="clear_text"
+        app:helperText="@string/require"
+        app:helperTextEnabled="true"
+        app:helperTextTextColor="@color/red"
+        app:layout_constraintTop_toBottomOf="@id/tilPassword"
+        app:passwordToggleTint="@color/white"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tieEmail"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-        <EditText
-            android:id="@+id/edtConfirmPassword"
-            android:hint="Confirm Password"
-            app:passwordToggleEnabled="true"
+            android:layout_height="wrap_content"
+            android:hapticFeedbackEnabled="true"
+            android:hint="Press Email"
+            android:textColor="@color/red"
+            android:textColorHint="@color/red"
             android:inputType="textPassword"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:paddingStart="30dp"
-            android:paddingEnd="50dp"
-            android:background="@drawable/custom_edt_login"
-            android:textSize="30sp"
-            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            app:textInputLayoutFocusedRectEnabled="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        app:boxCornerRadiusTopEnd="@dimen/_20sdp"
+        app:boxCornerRadiusBottomEnd="@dimen/_20sdp"
+        app:boxCornerRadiusBottomStart="@dimen/_20sdp"
+        app:boxCornerRadiusTopStart="@dimen/_20sdp"
+        android:id="@+id/tilPhone"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        app:boxBackgroundMode="outline"
+        app:counterEnabled="true"
+        app:counterMaxLength="50"
+        app:endIconMode="clear_text"
+        app:helperText="@string/require"
+        app:helperTextEnabled="true"
+        app:helperTextTextColor="@color/red"
+        app:layout_constraintTop_toBottomOf="@id/tilEmail"
+        app:passwordToggleTint="@color/white"
+        app:prefixText="+84"
+
+
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiePhone"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:hapticFeedbackEnabled="true"
+            android:hint="Press Phone"
+            android:textColor="@color/red"
+            android:textColorHint="@color/red"
+            android:textSize="16sp"
+            app:textInputLayoutFocusedRectEnabled="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilAge"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        app:boxBackgroundMode="outline"
+        app:counterEnabled="true"
+        app:counterMaxLength="50"
+        app:endIconMode="clear_text"
+        app:helperText="@string/require"
+        app:helperTextEnabled="true"
+        app:helperTextTextColor="@color/red"
+        app:layout_constraintTop_toBottomOf="@id/tilPhone"
+        app:boxCornerRadiusTopEnd="@dimen/_20sdp"
+        app:boxCornerRadiusBottomEnd="@dimen/_20sdp"
+        app:boxCornerRadiusBottomStart="@dimen/_20sdp"
+        app:boxCornerRadiusTopStart="@dimen/_20sdp"
+        app:passwordToggleTint="@color/white"
+        tools:ignore="MissingConstraints">
 
-
-        <Button
-            android:id="@+id/btnLogin"
-            android:text="Sign in"
-            android:textSize="20dp"
-            android:background="@drawable/custom_btn_signin"
-            app:backgroundTint="@null"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="50dp"
-            android:layout_marginStart="50dp"
-            android:textAllCaps="false"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tieAge"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-    </LinearLayout>
+            android:layout_height="wrap_content"
+            android:hapticFeedbackEnabled="true"
+            android:hint="Press Age"
+            android:textColor="@color/red"
+            android:textColorHint="@color/red"
+            android:textSize="16sp"
+            app:textInputLayoutFocusedRectEnabled="true" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-</FrameLayout>
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lavAdd"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginBottom="?attr/actionBarSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/add1"
+        tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

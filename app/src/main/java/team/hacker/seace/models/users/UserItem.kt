@@ -1,6 +1,9 @@
 package team.hacker.seace.models.users
 
+import android.os.Parcelable
 import com.google.gson.annotations.Expose
+import kotlinx.parcelize.Parcelize
+import java.io.Serializable
 
 data class UserItem(
     val Comments: List<Any>,

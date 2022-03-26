@@ -1,10 +1,12 @@
 package team.hacker.seace.models.comments
 
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
 data class CommentItem(
-    val Post: Any,
-    val User: Any,
     val contentComment: String,
     val idComment: Int,
     val idPost: Int,
     val idUser: String
-)
+):Parcelable

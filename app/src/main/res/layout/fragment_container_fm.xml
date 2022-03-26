@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="team.hacker.seace.fragments.ContainerFM">
+    tools:context="team.hacker.seace.fragments.intro.ContainerFM">
 
     <LinearLayout
         android:orientation="vertical"

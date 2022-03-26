@@ -1,4 +1,4 @@
-package team.hacker.seace.fragments
+package team.hacker.seace.fragments.intro
 
 import android.os.Bundle
 import android.os.Handler

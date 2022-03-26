@@ -5,17 +5,27 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.NavController
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.NavigationUI
 import team.hacker.seace.R
+import team.hacker.seace.databinding.FragmentSharePostBinding
 
 class SharePostFM : Fragment() {
-
-
+    lateinit var fmSharePostBinding: FragmentSharePostBinding
+    lateinit var navController: NavController
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_share_post, container, false)
+        fmSharePostBinding = FragmentSharePostBinding.inflate(layoutInflater)
+        initNavController()
+        NavigationUI.setupWithNavController(fmSharePostBinding.navBot,navController)
+        return fmSharePostBinding.root
+    }
+
+    private fun initNavController() {
+        navController = findNavController()
     }
 
 }

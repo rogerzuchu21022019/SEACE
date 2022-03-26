@@ -8,20 +8,20 @@ import androidx.fragment.app.Fragment
 import team.hacker.seace.databinding.FragmentCallListBinding
 
 
-class CallListFragment : Fragment()  {
-private lateinit var fmCallListBinding: FragmentCallListBinding
+class CallListFragment : Fragment() {
+    private lateinit var fmCallListBinding: FragmentCallListBinding
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
 
     ): View? {
-        fmCallListBinding= FragmentCallListBinding.inflate(layoutInflater)
+        fmCallListBinding = FragmentCallListBinding.inflate(layoutInflater)
 
         return fmCallListBinding.root
-fmCallListBinding.ivAvatar.setOnClickListener(View.OnClickListener {
+        fmCallListBinding.ivAvatar.setOnClickListener(View.OnClickListener {
 
-})
+        })
     }
 
 }

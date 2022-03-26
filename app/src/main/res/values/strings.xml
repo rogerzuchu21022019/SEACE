@@ -7,4 +7,6 @@
     <string name="register"><u>Register</u></string>
     <string name="send_message">SEND MESSAGE</string>
     <string name="receiver_message">RECEIVER MESSAGE</string>
+    <string name="require">Require</string>
+    <string name="introduce_password">* We will send you a message to set or reset your password</string>
 </resources>
