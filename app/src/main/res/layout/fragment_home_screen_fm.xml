@@ -1,81 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragments.HomeScreenFM">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <RelativeLayout
-        android:padding="10dp"
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TextView
-            android:id="@+id/txtTitle"
-            android:text="SEACE"
-            android:textColor="#CB08E1"
-            android:textSize="@dimen/_30sdp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+        android:layout_height="match_parent"
+        tools:context=".fragments.homefacebook.HomeScreenFM">
 
-        // Post
-        <LinearLayout
-            android:id="@+id/llPost"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:orientation="horizontal"
-            android:layout_below="@+id/txtTitle"
+        <RelativeLayout
+            android:padding="10dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:id="@+id/ivAvatar"
-                android:src="@drawable/icon_say_hello_128"
-                android:layout_width="@dimen/_40sdp"
-                android:layout_height="@dimen/_40sdp"/>
-            <EditText
-                android:id="@+id/edtContent"
-                android:hint="What’s on your mind?"
-                android:textSize="@dimen/_18sdp"
-                android:layout_weight="6"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"/>
-            <ImageView
-                android:id="@+id/ivChoiceImg"
-                android:layout_weight="1"
-                android:src="@drawable/icon_choice_img"
-                android:layout_gravity="center"
-                android:layout_width="0dp"
-                android:layout_height="@dimen/_30sdp"/>
-        </LinearLayout>
-        <Button
-            android:id="@+id/btnPost"
-            android:layout_below="@id/llPost"
-            android:text="Đăng"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-        // Story
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rcvStory"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal"
-            android:layout_below="@id/btnPost"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_100sdp"/>
+            android:layout_height="match_parent">
 
-        // Information
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rcvPostContent"
-            android:layout_marginTop="20dp"
-            android:layout_below="@id/rcvStory"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_230sdp"/>
+            <TextView
+                android:id="@+id/txtTitle"
+                android:text="SEACE"
+                android:textColor="#CB08E1"
+                android:textSize="@dimen/_30sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            // Post
+
+            <LinearLayout
+                android:id="@+id/llPost"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal"
+                android:layout_below="@+id/txtTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ivAvatar"
+                    android:src="@drawable/icon_say_hello_128"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp" />
+
+                <EditText
+                    android:id="@+id/edtContent"
+                    android:hint="What’s on your mind?"
+                    android:textSize="@dimen/_18sdp"
+                    android:layout_weight="6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent" />
+
+                <ImageView
+                    android:id="@+id/ivChoiceImg"
+                    android:layout_weight="1"
+                    android:src="@drawable/icon_choice_img"
+                    android:layout_gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_30sdp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnPost"
+                android:layout_below="@id/llPost"
+                android:text="Đăng"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            // Story
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvStory"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_below="@id/btnPost"
+                android:layout_marginTop="20dp"
+                tools:listitem="@layout/item_rv_stories"
+                android:orientation="horizontal" />
+
+            // Information
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvPostContent"
+                android:layout_width="match_parent"
+                tools:listitem="@layout/item_rv_post"
+                android:layout_height="@dimen/_230sdp"
+                android:layout_below="@id/rcvStory"
+                android:layout_marginTop="20dp" />
 
 
-        // bottom nav
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/tlFooter"
-            android:layout_alignParentBottom="true"
-            app:menu="@menu/bottom_menu_home"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_30sdp"/>
-    </RelativeLayout>
-</FrameLayout>
+            // bottom nav
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/tlFooter"
+                android:layout_alignParentBottom="true"
+                app:menu="@menu/bottom_menu_home"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp" />
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

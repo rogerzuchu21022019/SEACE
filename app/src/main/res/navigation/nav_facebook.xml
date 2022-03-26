@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeScreenFM">
+    <fragment
+        android:id="@+id/homeScreenFM"
+        android:name="team.hacker.seace.fragments.homefacebook.HomeScreenFM"
+        android:label="fragment_home_screen_fm"
+        tools:layout="@layout/fragment_home_screen_fm" />
+    <fragment
+        android:id="@+id/commentFM2"
+        android:name="team.hacker.seace.fragments.message.CommentFM"
+        android:label="fragment_comment"
+        tools:layout="@layout/fragment_comment" />
+</navigation>
