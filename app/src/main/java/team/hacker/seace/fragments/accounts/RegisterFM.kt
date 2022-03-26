@@ -5,14 +5,24 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.NavController
+import androidx.navigation.fragment.findNavController
 import team.hacker.seace.R
+import team.hacker.seace.databinding.FragmentRegisterFmBinding
 
 class RegisterFM : Fragment() {
+    lateinit var registerFmBinding: FragmentRegisterFmBinding
+    lateinit var navController: NavController
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_register_fm, container, false)
+        registerFmBinding = FragmentRegisterFmBinding.inflate(layoutInflater)
+        registerFmBinding.btnSignUp.setOnClickListener{
+            navController = findNavController()
+            var action = RegisterFMDirections.actionRegisterFMToSignInFM()
+            navController.navigate(action)
+        }
+        return registerFmBinding.root
     }
 }

@@ -19,6 +19,7 @@
         <entry key="app/src/main/res/layout/fragment_comment.xml" value="0.32155797101449274" />
         <entry key="app/src/main/res/layout/fragment_container_fm.xml" value="0.1887031408308004" />
         <entry key="app/src/main/res/layout/fragment_forgot_fm.xml" value="0.32155797101449274" />
+        <entry key="app/src/main/res/layout/fragment_home_screen_fm.xml" value="0.2368659420289855" />
         <entry key="app/src/main/res/layout/fragment_intro1_fm.xml" value="0.1890625" />
         <entry key="app/src/main/res/layout/fragment_intro3_fm.xml" value="0.1890625" />
         <entry key="app/src/main/res/layout/fragment_mess_chat.xml" value="0.1" />
@@ -37,6 +38,7 @@
         <entry key="app/src/main/res/layout/item_rv_stories.xml" value="0.48542458808618505" />
         <entry key="app/src/main/res/layout/item_send_mess.xml" value="0.16185410334346503" />
         <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.3880208333333333" />
+        <entry key="app/src/main/res/menu/bottom_menu_home.xml" value="0.3880208333333333" />
       </map>
     </option>
   </component>
