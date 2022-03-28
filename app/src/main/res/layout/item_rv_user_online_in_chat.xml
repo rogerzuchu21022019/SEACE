@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="user"
+            type="team.hacker.seace.models.users.UserItem" />
+
+        <variable
+            name="story"
+            type="team.hacker.seace.models.stories.StoryItem" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl1"
+        android:layout_margin="@dimen/_16sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civAvatar"
+            android:padding="@dimen/_10sdp"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:src="@mipmap/ic_launcher"
+            tools:ignore="MissingConstraints" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civStatus"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            app:layout_constraintBottom_toBottomOf="@id/civAvatar"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:layout_marginBottom="@dimen/_2sdp"
+            app:layout_constraintEnd_toEndOf="@id/civAvatar"
+            android:src="@mipmap/ic_launcher"
+            tools:ignore="MissingConstraints" />
+
+
+        <TextView
+            android:id="@+id/tvUserName"
+            app:layout_constraintTop_toBottomOf="@id/civAvatar"
+            app:layout_constraintStart_toStartOf="@id/civAvatar"
+            app:layout_constraintEnd_toEndOf="@id/civAvatar"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:paddingStart="@dimen/_10sdp"
+            android:text="@{user.idUser}"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

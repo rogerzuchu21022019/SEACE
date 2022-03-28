@@ -14,14 +14,17 @@ class ViewPagerAdapter(
     }
 
     override fun createFragment(position: Int): Fragment {
-        if(position == 0){
-            return Intro1FM()
-        }else if(position == 1){
-            return  Intro2FM()
-        }else{
-            return Intro3FM()
+        return when (position) {
+            0 -> {
+                Intro1FM()
+            }
+            1 -> {
+                Intro2FM()
+            }
+            else -> {
+                Intro3FM()
+            }
         }
-        return Intro1FM()
     }
 
 }

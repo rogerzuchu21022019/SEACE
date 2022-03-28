@@ -7,22 +7,21 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
-import team.hacker.seace.R
-import team.hacker.seace.databinding.FragmentRegisterFmBinding
+import team.hacker.seace.databinding.FragmentRegisterBinding
 
 class RegisterFM : Fragment() {
-    lateinit var registerFmBinding: FragmentRegisterFmBinding
+    lateinit var fmRegisterFmBinding: FragmentRegisterBinding
     lateinit var navController: NavController
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        registerFmBinding = FragmentRegisterFmBinding.inflate(layoutInflater)
-        registerFmBinding.lavAdd.setOnClickListener{
+        fmRegisterFmBinding = FragmentRegisterBinding.inflate(layoutInflater)
+        fmRegisterFmBinding.lavAdd.setOnClickListener{
             navController = findNavController()
             var action = RegisterFMDirections.actionRegisterFMToSignInFM()
             navController.navigate(action)
         }
-        return registerFmBinding.root
+        return fmRegisterFmBinding.root
     }
 }

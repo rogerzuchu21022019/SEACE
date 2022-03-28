@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="user"
+            type="team.hacker.seace.models.users.UserItem" />
+
+        <variable
+            name="story"
+            type="team.hacker.seace.models.stories.StoryItem" />
+    </data>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cl1"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_120sdp"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="@dimen/_15sdp"
+        card_view:cardCornerRadius="@dimen/_15sdp"
+        app:cardElevation="@dimen/_10sdp"
+        tools:ignore="MissingConstraints">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civAvatar"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_16sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:src="@mipmap/ic_launcher"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/idContent"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp"
+            android:src="@mipmap/ic_launcher" />
+
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:paddingStart="@dimen/_10sdp"
+            android:text="@{user.idUser}"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.cardview.widget.CardView>
+
+
+</layout>

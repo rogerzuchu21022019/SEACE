@@ -9,4 +9,12 @@
     <string name="receiver_message">RECEIVER MESSAGE</string>
     <string name="require">Require</string>
     <string name="introduce_password">* We will send you a message to set or reset your password</string>
+    <string name="press_phone">Press Phone</string>
+    <string name="press_age">Press Age</string>
+    <string name="press_email">Press Email</string>
+    <string name="press_password">Press Password</string>
+    <string name="press_fullname">Press FullName</string>
+    <string name="press_username">Press UserName</string>
+    <string name="sign_in">Sign In</string>
+    <string name="let_s_start">Let\'s Start</string>
 </resources>

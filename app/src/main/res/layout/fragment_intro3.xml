@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.MainActivity">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lavIntro3"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/tryhard_study"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_240sdp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tvTitle5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_120sdp"
+            android:layout_marginEnd="@dimen/_120sdp"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="OK"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lavIntro3"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tvTitle3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_60sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_60sdp"
+            android:gravity="center_horizontal"
+            android:text="OK 1"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle5"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tvTitle4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:gravity="center_horizontal"
+            android:text="OK 2"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle3"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/acbStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/let_s_start"
+            android:textColor="@color/red"
+            android:background="@color/white"
+            android:padding="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

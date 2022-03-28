@@ -3,39 +3,115 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navi"
-    app:startDestination="@id/sayHelloFM">
+    app:startDestination="@id/splashFM">
     <fragment
-        android:id="@+id/sayHelloFM"
-        android:name="team.hacker.seace.fragments.intro.SayHelloFM"
-        android:label="fragment_say_hello_fm"
-        tools:layout="@layout/fragment_say_hello_fm" >
+        android:id="@+id/profileFriendFragment"
+        android:name="team.hacker.seace.fragments.profile.ProfileFriendFM"
+        android:label="ProfileFriendFragment"
+        tools:layout="@layout/fragment_profile_friend" >
         <action
-            android:id="@+id/action_sayHelloFM_to_containerFM2"
-            app:destination="@id/containerFM2" />
+            android:id="@+id/action_profileFriendFragment_to_chatFM"
+            app:destination="@id/chatFM" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/botPeople"
+        android:name="team.hacker.seace.fragments.message.people.PeopleFM"
+
+        tools:layout="@layout/fragment_people" />
+    <fragment
+        android:id="@+id/botStories"
+        android:name="team.hacker.seace.fragments.message.stories.StoriesFM"
+        android:label="StoriesListFragment"
+        tools:layout="@layout/fragment_stories" />
+    <fragment
+        android:id="@+id/chatFM"
+        android:name="team.hacker.seace.fragments.message.chats.ChatFM"
+        android:label="ChatFM"
+        tools:layout="@layout/fragment_chat">
+        <action
+            android:id="@+id/action_chatFM_to_callAudiolFragment"
+            app:destination="@id/callAudiolFragment" />
+        <action
+            android:id="@+id/action_chatFM_to_callVideoFragment"
+            app:destination="@id/callVideoFragment" />
+        <action
+            android:id="@+id/action_chatFM_to_botChat"
+            app:destination="@id/botChat" />
+        <action
+            android:id="@+id/action_chatFM_to_profileFriendFragment"
+            app:destination="@id/profileFriendFragment" />
+
     </fragment>
     <fragment
-        android:id="@+id/containerFM2"
-        android:name="team.hacker.seace.fragments.intro.ContainerFM"
-        android:label="fragment_container_fm"
-        tools:layout="@layout/fragment_container_fm" >
+
+        android:id="@+id/callAudiolFragment"
+        android:name="team.hacker.seace.fragments.message.calls.CallAudiolFM"
+        android:label="CallAudiolFragment"
+        tools:layout="@layout/fragment_call_audio">
         <action
-            android:id="@+id/action_containerFM2_to_signInFM"
+            android:id="@+id/action_callAudiolFragment_to_chatFM"
+            app:destination="@id/chatFM" />
+    </fragment>
+    <fragment
+        android:id="@+id/commentFM"
+        android:name="team.hacker.seace.fragments.message.CommentFM"
+        android:label="fragment_comment"
+        tools:layout="@layout/fragment_comment" >
+        <action
+            android:id="@+id/action_commentFM_to_botHome"
+            app:destination="@id/botHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/callVideoFragment"
+        android:name="team.hacker.seace.fragments.message.calls.CallVideoFM"
+        android:label="CallVideoFragment"
+        tools:layout="@layout/fragment_call_video">
+        <action
+            android:id="@+id/action_callVideoFragment_to_chatFM"
+            app:destination="@id/chatFM" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileMeFragment"
+        android:name="team.hacker.seace.fragments.profile.ProfileMeFM"
+        android:label="ProfileMeFragment"
+        tools:layout="@layout/fragment_profile_me" >
+        <action
+            android:id="@+id/action_profileMeFragment_to_botHome"
+            app:destination="@id/botHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFM"
+        tools:layout="@layout/fragment_splash"
+        android:name="team.hacker.seace.fragments.intro.SplashFM"
+        android:label="SplashFM" >
+        <action
+            android:id="@+id/action_splashFM_to_containerFM"
+            app:destination="@id/containerFM" />
+    </fragment>
+    <fragment
+        android:id="@+id/containerFM"
+        tools:layout="@layout/fragment_container"
+        android:name="team.hacker.seace.fragments.intro.ContainerFM"
+        android:label="ContainerFM" >
+        <action
+            android:id="@+id/action_containerFM_to_signInFM"
             app:destination="@id/signInFM" />
     </fragment>
     <fragment
         android:id="@+id/registerFM"
+        tools:layout="@layout/fragment_register"
         android:name="team.hacker.seace.fragments.accounts.RegisterFM"
-        android:label="fragment_register_fm"
-        tools:layout="@layout/fragment_register_fm" >
+        android:label="RegisterFM" >
         <action
             android:id="@+id/action_registerFM_to_signInFM"
             app:destination="@id/signInFM" />
     </fragment>
     <fragment
         android:id="@+id/signInFM"
+        tools:layout="@layout/fragment_login"
         android:name="team.hacker.seace.fragments.accounts.SignInFM"
-        android:label="fragment_sign_in_fm"
-        tools:layout="@layout/fragment_sign_in_fm" >
+        android:label="SignInFM" >
         <action
             android:id="@+id/action_signInFM_to_registerFM"
             app:destination="@id/registerFM" />
@@ -43,8 +119,8 @@
             android:id="@+id/action_signInFM_to_forgotFM"
             app:destination="@id/forgotFM" />
         <action
-            android:id="@+id/action_signInFM_to_nav_graph2"
-            app:destination="@id/nav_graph" />
+            android:id="@+id/action_signInFM_to_homeScreenFM"
+            app:destination="@id/botHome" />
     </fragment>
     <fragment
         android:id="@+id/forgotFM"
@@ -55,5 +131,34 @@
             android:id="@+id/action_forgotFM_to_signInFM"
             app:destination="@id/signInFM" />
     </fragment>
-    <include app:graph="@navigation/nav_mess" />
+    <fragment
+        android:id="@+id/botHome"
+        tools:layout="@layout/fragment_home_screen_seace"
+        android:name="team.hacker.seace.fragments.home.HomeScreenSeaceFM"
+        android:label="HomeScreenFM" >
+        <action
+            android:id="@+id/action_botHome_to_botChat"
+            app:destination="@id/botChat" />
+        <action
+            android:id="@+id/action_botHome_to_profileMeFragment"
+            app:destination="@id/profileMeFragment" />
+        <action
+            android:id="@+id/action_botHome_to_commentFM"
+            app:destination="@id/commentFM" />
+        <action
+            android:id="@+id/action_botHome_self"
+            app:destination="@id/botHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/botChat"
+        tools:layout="@layout/fragment_home_screen_chat"
+        android:name="team.hacker.seace.fragments.home.HomeScreenChatFM"
+        android:label="HistoryChatFM" >
+        <action
+            android:id="@+id/action_botChat_to_chatFM"
+            app:destination="@id/chatFM" />
+        <action
+            android:id="@+id/action_botChat_to_botHome2"
+            app:destination="@id/botHome" />
+    </fragment>
 </navigation>

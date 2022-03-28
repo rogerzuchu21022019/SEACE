@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lavRocketUp"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tvSEACE"
+            app:layout_constraintVertical_bias="0.8"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/rocket_up"
+            app:lottie_speed="0.5"
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/tvSEACE"
+            android:text="SEACE"
+            app:layout_constraintBottom_toTopOf="@id/lavImg"
+            app:layout_constraintStart_toStartOf="@id/lavImg"
+            app:layout_constraintEnd_toEndOf="@id/lavImg"
+            android:textColor="@color/purple_500"
+            android:textSize="@dimen/_30sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints" />
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lavImg"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/study"
+            app:lottie_speed="0.5"
+            tools:ignore="MissingConstraints" />
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lavImg2"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/study"
+            app:lottie_speed="0.5"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tvSlogan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Every thing is simple"
+            android:textSize="@dimen/_20sdp"
+            android:textColor="@color/purple_500"
+            app:layout_constraintEnd_toEndOf="@id/lavImg"
+            app:layout_constraintStart_toStartOf="@id/lavImg"
+            app:layout_constraintTop_toBottomOf="@id/lavImg"
+            tools:ignore="MissingConstraints" />
+
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="@id/lavImg"
+            app:layout_constraintStart_toStartOf="@id/tvSlogan"
+            app:layout_constraintTop_toBottomOf="@id/tvSlogan" />
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lavImg1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/progressBar"
+            app:layout_constraintStart_toStartOf="@id/progressBar"
+            app:layout_constraintTop_toTopOf="@id/progressBar"
+            app:lottie_autoPlay="true"
+            app:lottie_rawRes="@raw/go"
+            app:lottie_speed="1"
+            tools:ignore="MissingConstraints" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

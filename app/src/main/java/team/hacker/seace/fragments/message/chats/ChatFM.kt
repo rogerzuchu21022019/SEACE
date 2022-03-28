@@ -12,18 +12,19 @@ import androidx.navigation.ui.AppBarConfiguration
 import team.hacker.seace.databinding.FragmentChatBinding
 
 class ChatFM : Fragment() {
-    var fragmentChatBinding: FragmentChatBinding? = null
+    var fmChatBinding: FragmentChatBinding? = null
     lateinit var navController: NavController
+    lateinit var action: NavDirections
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        fragmentChatBinding = FragmentChatBinding.inflate(layoutInflater)
+        fmChatBinding = FragmentChatBinding.inflate(layoutInflater)
         initClick()
 
         initNavController()
-        return fragmentChatBinding!!.root
+        return fmChatBinding!!.root
     }
 
 
@@ -32,10 +33,26 @@ class ChatFM : Fragment() {
     }
 
     private fun initClick() {
-        fragmentChatBinding!!.ivBack.setOnClickListener {
-            var action:NavDirections = ChatFMDirections.actionChatFMToBotChat()
-            navController.navigate(action)
+        fmChatBinding!!.ivBack.setOnClickListener {
+            action = ChatFMDirections.actionChatFMToBotChat()
+            runAction()
         }
+        fmChatBinding!!.ivCallAudio.setOnClickListener {
+            action = ChatFMDirections.actionChatFMToCallAudiolFragment()
+            runAction()
+        }
+        fmChatBinding!!.ivCallVideo.setOnClickListener {
+            action = ChatFMDirections.actionChatFMToCallVideoFragment()
+            runAction()
+        }
+        fmChatBinding!!.ivProfile.setOnClickListener {
+            action = ChatFMDirections.actionChatFMToProfileFriendFragment()
+            runAction()
+        }
+    }
+
+    private fun runAction() {
+        navController.navigate(action)
     }
 
 }

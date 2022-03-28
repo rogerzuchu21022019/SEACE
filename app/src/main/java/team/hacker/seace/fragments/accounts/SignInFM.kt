@@ -9,24 +9,36 @@ import androidx.navigation.NavController
 import androidx.navigation.NavDirections
 import androidx.navigation.fragment.findNavController
 import team.hacker.seace.R
-import team.hacker.seace.databinding.FragmentSignInFmBinding
+import team.hacker.seace.databinding.FragmentLoginBinding
 
 class SignInFM : Fragment() {
-    lateinit var fmSignInFmBinding: FragmentSignInFmBinding
+    lateinit var fmSignInFmBinding: FragmentLoginBinding
     lateinit var navController: NavController
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        fmSignInFmBinding = FragmentSignInFmBinding.inflate(layoutInflater)
+        fmSignInFmBinding = FragmentLoginBinding.inflate(layoutInflater)
         initClick()
-        navController = findNavController()
+        initNavController()
         return fmSignInFmBinding.root
     }
 
+    private fun initNavController() {
+        navController = findNavController()
+    }
+
     private fun initClick() {
-        fmSignInFmBinding.btnLogin.setOnClickListener {
-            var action:NavDirections = SignInFMDirections.actionSignInFMToNavGraph2()
+        fmSignInFmBinding.acbLogin.setOnClickListener {
+            val action:NavDirections = SignInFMDirections.actionSignInFMToHomeScreenFM()
+            navController.navigate(action)
+        }
+        fmSignInFmBinding.tvForgetPassword.setOnClickListener {
+            val action:NavDirections = SignInFMDirections.actionSignInFMToForgotFM()
+            navController.navigate(action)
+        }
+        fmSignInFmBinding.tvRegister.setOnClickListener {
+            val action:NavDirections = SignInFMDirections.actionSignInFMToRegisterFM()
             navController.navigate(action)
         }
     }

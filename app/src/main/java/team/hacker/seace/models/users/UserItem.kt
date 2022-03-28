@@ -1,6 +1,9 @@
 package team.hacker.seace.models.users
 
 import android.os.Parcelable
+import android.widget.ImageView
+import androidx.databinding.BindingAdapter
+import com.bumptech.glide.Glide
 import com.google.gson.annotations.Expose
 import kotlinx.parcelize.Parcelize
 import java.io.Serializable
@@ -28,4 +31,5 @@ data class UserItem(
     val password: String,
     @Expose
     val phone: String
+
 )

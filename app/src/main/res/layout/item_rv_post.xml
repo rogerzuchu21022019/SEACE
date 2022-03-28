@@ -3,10 +3,33 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+
+        <variable
+            name="user"
+            type="team.hacker.seace.models.users.UserItem" />
+
+        <variable
+            name="post"
+            type="team.hacker.seace.models.posts.PostItem" />
+        <variable
+            name="photo"
+            type="team.hacker.seace.models.photoposts.PhotoPostItem" />
+
+        <variable
+            name="like"
+            type="team.hacker.seace.models.likes.LikeItem" />
+
+        <variable
+            name="comment"
+            type="team.hacker.seace.models.comments.CommentItem" />
+
+
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cl1"
@@ -32,7 +55,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_20sdp"
-                android:text=""
+                android:text="@{post.idUser}"
                 app:layout_constraintBottom_toBottomOf="@id/civAvatar"
                 app:layout_constraintStart_toEndOf="@id/civAvatar"
                 app:layout_constraintTop_toTopOf="@id/civAvatar"
@@ -44,8 +67,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_20sdp"
-
-                android:text="16gio"
+                android:text="@{post.timePost}"
                 app:layout_constraintBottom_toBottomOf="@id/civAvatar"
                 app:layout_constraintStart_toEndOf="@id/civAvatar"
                 app:layout_constraintTop_toBottomOf="@id/tvUserName"
@@ -55,6 +77,7 @@
 
         <TextView
             android:id="@+id/tvContentPost"
+            android:text="@{post.contentPost}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_20sdp"
@@ -75,8 +98,8 @@
                 android:id="@+id/ivPhoto"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_220sdp"
+                android:src="@drawable/girl"
                 app:layout_constraintEnd_toEndOf="parent"
-
 
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -91,27 +114,32 @@
                 app:layout_constraintTop_toBottomOf="@id/ivPhoto">
 
                 <TextView
-                    android:id="@+id/btnLike"
+                    android:id="@+id/tvLike"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_5sdp"
                     android:layout_weight="1"
+                    android:textSize="@dimen/_16sdp"
                     android:drawableLeft="@drawable/delete"
-                    android:text="like" />
+                    android:text="Like" />
 
                 <TextView
-                    android:id="@+id/btnComment"
+                    android:id="@+id/tvComment"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:textSize="@dimen/_16sdp"
+
                     android:drawableLeft="@drawable/delete"
                     android:text="Comment" />
 
                 <TextView
-                    android:id="@+id/btnShare"
+                    android:id="@+id/tvShare"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:textSize="@dimen/_16sdp"
+
                     android:drawableLeft="@drawable/delete"
                     android:text="Share" />
             </LinearLayout>

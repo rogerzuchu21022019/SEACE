@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+<group android:checkableBehavior="all">
+        <item
+            android:id="@+id/botChat"
+            android:icon="@drawable/ic_chat"
+            android:title="Chat" />
+
+        <item
+            android:id="@+id/botPeople"
+            android:icon="@drawable/ic_people"
+            android:title="People" />
+        <item
+            android:id="@+id/botStories"
+            android:icon="@drawable/ic_stories"
+            android:title="Stories" />
+    </group>
+
+
+</menu>

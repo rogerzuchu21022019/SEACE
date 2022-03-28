@@ -18,8 +18,8 @@
 
         <ImageView
             android:id="@+id/ivBack"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_30sdp"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
             android:src="@drawable/back"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -27,8 +27,8 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/civUser"
-            android:layout_width="@dimen/_40sdp"
-            android:layout_height="@dimen/_40sdp"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
             android:src="@mipmap/ic_launcher"
             app:layout_constraintBottom_toBottomOf="@id/ivBack"
             app:layout_constraintStart_toEndOf="@id/ivBack"
@@ -54,8 +54,8 @@
 
         <ImageView
             android:id="@+id/ivCallAudio"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_30sdp"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
             android:src="@drawable/phone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/ivCallVideo"
@@ -63,8 +63,8 @@
 
         <ImageView
             android:id="@+id/ivCallVideo"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_30sdp"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
             android:src="@drawable/videocam"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/ivProfile"
@@ -72,8 +72,8 @@
 
         <ImageView
             android:id="@+id/ivProfile"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_30sdp"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
             android:src="@drawable/profile"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -83,25 +83,23 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvSender"
+        android:id="@+id/rvContentChat"
         app:layout_constraintBottom_toTopOf="@id/layoutToolChat"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintTop_toBottomOf="@id/layoutToolCall"
-        tools:ignore="MissingConstraints"
-        tools:listitem="@layout/item_send_mess" />
+        tools:ignore="MissingConstraints" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layoutToolChat"
         android:layout_width="match_parent"
-        android:layout_marginBottom="?attr/actionBarSize"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="MissingConstraints">
 
         <ImageView
-            android:id="@+id/imgGallery"
+            android:id="@+id/ivGallery"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/gallery"
@@ -110,23 +108,23 @@
             app:layout_constraintStart_toStartOf="parent"
             tools:ignore="MissingConstraints" />
         <ImageView
-            android:id="@+id/imgCamera"
+            android:id="@+id/ivCamera"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/camera"
 
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/imgGallery"
+            app:layout_constraintStart_toEndOf="@id/ivGallery"
             tools:ignore="MissingConstraints" />
 
         <ImageView
-            android:id="@+id/imgMic"
+            android:id="@+id/ivMic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/mic"
 
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/imgCamera" />
+            app:layout_constraintStart_toEndOf="@id/ivCamera" />
 
         <EditText
             android:id="@+id/edtMessage"
@@ -138,12 +136,12 @@
             android:paddingStart="20dp"
             android:src="@drawable/gallery"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/imgSend"
-            app:layout_constraintStart_toEndOf="@id/imgMic"
+            app:layout_constraintEnd_toStartOf="@id/ivSend"
+            app:layout_constraintStart_toEndOf="@id/ivMic"
             tools:ignore="MissingConstraints" />
 
         <ImageView
-            android:id="@+id/imgEmoji"
+            android:id="@+id/ivEmoji"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingRight="@dimen/_5sdp"
@@ -153,7 +151,7 @@
             tools:ignore="MissingConstraints" />
 
         <ImageView
-            android:id="@+id/imgSend"
+            android:id="@+id/ivSend"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"

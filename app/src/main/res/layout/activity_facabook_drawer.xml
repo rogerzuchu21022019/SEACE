@@ -19,7 +19,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:menu="@menu/bottom_menu" />
+            app:menu="@menu/bottom_menu_chat" />
 
         <fragment
             android:id="@+id/fragment"
@@ -31,6 +31,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:navGraph="@navigation/nav_mess" />
+            app:navGraph="@navigation/navi_intro" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

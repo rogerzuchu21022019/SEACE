@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fmIntro2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hapticFeedbackEnabled="true"
+        tools:context=".activities.MainActivity">
+
+
+        <TextView
+            android:id="@+id/tvTitle3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle5"
+            android:layout_marginStart="@dimen/_80sdp"
+            android:layout_marginEnd="@dimen/_80sdp"
+            android:layout_marginTop="@dimen/_40sdp"
+            app:layout_constraintStart_toStartOf="@id/tvTitle5"
+            app:layout_constraintEnd_toEndOf="@id/tvTitle5"
+            android:gravity="center_horizontal"
+            android:text="Ok"
+            tools:ignore="MissingConstraints"/>
+
+        <TextView
+            android:id="@+id/tvTitle5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_80sdp"
+            android:layout_marginEnd="@dimen/_80sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:gravity="center_horizontal"
+            android:text="Ok 1"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tvTitle4"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_40sdp"
+            android:gravity="center_horizontal"
+            android:text="OK 2"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle3"
+            app:layout_constraintStart_toStartOf="@id/tvTitle3"
+            app:layout_constraintEnd_toEndOf="@id/tvTitle3"
+            tools:ignore="MissingConstraints"/>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lavIntro2"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/study_kid"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintStart_toStartOf="@id/tvTitle4"
+            app:layout_constraintEnd_toEndOf="@id/tvTitle4"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle4"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_180sdp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
