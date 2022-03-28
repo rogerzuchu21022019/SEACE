@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
 import androidx.navigation.NavDirections
 import androidx.navigation.fragment.findNavController
@@ -15,6 +16,7 @@ import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import team.hacker.seace.R
 import team.hacker.seace.adapters.PostAdapter
 import team.hacker.seace.adapters.StoriesInHomeScreenSeaceAdapter
 import team.hacker.seace.databinding.FragmentHomeScreenSeaceBinding
@@ -35,7 +37,7 @@ class HomeScreenSeaceFM : Fragment(), PostAdapter.OnClickItemInRecyclerView {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        fmHomeSeaceFmBinding = FragmentHomeScreenSeaceBinding.inflate(layoutInflater)
+        fmHomeSeaceFmBinding = DataBindingUtil.inflate(inflater,R.layout.fragment_home_screen_seace,container,false)
         getAllStories()
         initRecyclerView()
         initNavController()
@@ -58,7 +60,9 @@ class HomeScreenSeaceFM : Fragment(), PostAdapter.OnClickItemInRecyclerView {
                         listStories = responseStory.body()!!,
                         listUsers = responseUser.body()!!
                     )
-                    adapterPost.setDataforAdapter(response.body()!!)
+                    adapterPost.setDataforAdapter(
+                        listPosts = response.body()!!,
+                        listUser= responseUser.body()!!)
                 }
             }
         }

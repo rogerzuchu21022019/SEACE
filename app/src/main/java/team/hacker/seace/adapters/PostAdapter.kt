@@ -21,6 +21,7 @@ import team.hacker.seace.models.users.UserItem
 
 class PostAdapter: RecyclerView.Adapter<PostAdapter.PostViewHolder>() {
     private var listPosts: List<PostItem> = emptyList()
+    private var listUser: List<UserItem> = emptyList()
     lateinit var layoutInflater:LayoutInflater
     lateinit var itemRvPostBinding: ItemRvPostBinding
     lateinit var onClickItemInRecyclerView: OnClickItemInRecyclerView
@@ -34,8 +35,9 @@ class PostAdapter: RecyclerView.Adapter<PostAdapter.PostViewHolder>() {
         }
     }
 
-    fun setDataforAdapter(listPosts: List<PostItem>){
+    fun setDataforAdapter(listPosts: List<PostItem>,listUser: List<UserItem>){
         this.listPosts = listPosts
+        this.listUser = listUser
         notifyDataSetChanged()
     }
     fun setItemOnClickInRecyclerView(onClickItemInRecyclerView: OnClickItemInRecyclerView){
@@ -49,7 +51,9 @@ class PostAdapter: RecyclerView.Adapter<PostAdapter.PostViewHolder>() {
 
     override fun onBindViewHolder(holder: PostViewHolder, position: Int) {
         val currentPost = listPosts[position]
+        val currentUser = listUser[position]
         itemRvPostBinding.post=currentPost
+        itemRvPostBinding.user=currentUser
     }
 
     override fun getItemCount(): Int {

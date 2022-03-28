@@ -32,7 +32,7 @@
             android:layout_height="@dimen/_80sdp"
             android:layout_marginStart="@dimen/_10sdp"
             android:layout_marginTop="@dimen/_10sdp"
-            android:src="@mipmap/ic_launcher"
+            android:loadURL="@{user.avatar}"
             tools:ignore="MissingConstraints" />
 
         <de.hdodenhof.circleimageview.CircleImageView
