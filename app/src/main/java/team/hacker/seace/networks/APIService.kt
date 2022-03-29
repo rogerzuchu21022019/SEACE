@@ -29,7 +29,7 @@ interface APIService {
     suspend fun getAllStories(): Response<List<StoryItem>>
 
     @GET("api/photos-post")
-    suspend fun getAllPhotoPost(): Response<List<StoryItem>>
+    suspend fun getAllPhotoPost(): Response<List<PhotoPostItem>>
 
     @GET("api/users")
     suspend fun getAllUsers(): Response<List<UserItem>>

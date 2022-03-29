@@ -19,8 +19,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cl1"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/_120sdp"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_150sdp"
         app:cardUseCompatPadding="true"
         app:cardCornerRadius="@dimen/_15sdp"
         card_view:cardCornerRadius="@dimen/_15sdp"
@@ -34,14 +34,17 @@
 
            <ImageView
                android:id="@+id/idContent"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:loadURL="@{user.avatar}"
                android:scaleType="centerCrop"
-               android:layout_width="@dimen/_80sdp"
-               app:layout_constraintTop_toTopOf="parent"
-               app:layout_constraintEnd_toEndOf="parent"
-               app:layout_constraintStart_toStartOf="parent"
                app:layout_constraintBottom_toBottomOf="parent"
-               android:layout_height="@dimen/_120sdp"
-               android:loadURL="@{user.avatar}" />
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintHorizontal_bias="0.0"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintVertical_bias="0.0" />
+
            <de.hdodenhof.circleimageview.CircleImageView
                android:id="@+id/civAvatar"
                app:layout_constraintTop_toTopOf="parent"
@@ -60,7 +63,7 @@
                android:layout_height="wrap_content"
                app:layout_constraintBottom_toBottomOf="parent"
                android:layout_marginBottom="@dimen/_10sdp"
-               android:paddingStart="@dimen/_10sdp"
+               android:paddingStart="@dimen/_5sdp"
                android:text="@{user.idUser}"
                tools:ignore="MissingConstraints" />
        </androidx.constraintlayout.widget.ConstraintLayout>

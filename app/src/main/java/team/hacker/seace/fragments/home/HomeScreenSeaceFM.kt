@@ -51,19 +51,19 @@ class HomeScreenSeaceFM : Fragment(), PostAdapter.OnClickItemInRecyclerView {
     private fun getAllStories() {
         GlobalScope.launch(Dispatchers.Main) {
             val response = apiService.getAllPosts()
-
             val responseStory = apiService.getAllStories()
             val responseUser = apiService.getAllUsers()
             if (responseUser.isSuccessful) {
-                for (data in responseUser.body()!!) {
+
                     adapterStory.setDataForAdapter(
                         listStories = responseStory.body()!!,
                         listUsers = responseUser.body()!!
                     )
                     adapterPost.setDataforAdapter(
                         listPosts = response.body()!!,
-                        listUser= responseUser.body()!!)
-                }
+                        listUser= responseUser.body()!!
+
+                    )
             }
         }
     }

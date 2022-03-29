@@ -5,11 +5,13 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import team.hacker.seace.databinding.ItemRvHomeScreenChatBinding
 import team.hacker.seace.models.comments.CommentItem
+import team.hacker.seace.models.likes.Like
+import team.hacker.seace.models.likes.LikeItem
+import team.hacker.seace.models.photoposts.PhotoPostItem
 import team.hacker.seace.models.users.UserItem
 
-class HomeScreenChatAdapter() : RecyclerView.Adapter<HomeScreenChatAdapter.HistoryViewHolder>() {
+class HomeScreenChatAdapter : RecyclerView.Adapter<HomeScreenChatAdapter.HistoryViewHolder>() {
     private var historyChatList: List<UserItem> = emptyList()
-    private var listComment: List<CommentItem> = emptyList()
     lateinit var layoutInflater: LayoutInflater
     lateinit var itemRvHomeScreenChatBinding: ItemRvHomeScreenChatBinding
     lateinit var onClickItemChatInRecyclerView: OnClickItemChatInRecyclerView
@@ -30,9 +32,10 @@ class HomeScreenChatAdapter() : RecyclerView.Adapter<HomeScreenChatAdapter.Histo
         this.onClickItemChatInRecyclerView = onClickItemChatInRecyclerView
     }
 
-    fun setDataForAdapter(historyChatList: List<UserItem>, listComment: List<CommentItem>) {
+    fun setDataForAdapter(historyChatList: List<UserItem>
+    ) {
         this.historyChatList = historyChatList
-        this.listComment = listComment
+
         notifyDataSetChanged()
     }
 
@@ -48,10 +51,8 @@ class HomeScreenChatAdapter() : RecyclerView.Adapter<HomeScreenChatAdapter.Histo
     }
 
     override fun onBindViewHolder(holder: HistoryViewHolder, position: Int) {
-        var currentContent = historyChatList[position]
-//        var currentComment = listComment[position]
+        val currentContent = historyChatList[position]
         itemRvHomeScreenChatBinding.user = currentContent
-//        itemRvHomeScreenChatBinding.comment = currentComment
     }
 
     override fun getItemCount(): Int {

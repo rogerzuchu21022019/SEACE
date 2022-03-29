@@ -98,7 +98,7 @@
                 android:id="@+id/ivPhoto"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_220sdp"
-                android:src="@drawable/girl"
+                android:loadURL="@{user.avatar}"
                 app:layout_constraintEnd_toEndOf="parent"
 
                 app:layout_constraintStart_toStartOf="parent"

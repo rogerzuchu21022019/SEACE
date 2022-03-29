@@ -60,12 +60,9 @@ class HomeScreenChatFM : Fragment(),HomeScreenChatAdapter.OnClickItemChatInRecyc
     private fun getAllUsers() {
         GlobalScope.launch(Dispatchers.Main) {
             val response = apiService.getAllUsers()
-            val responseComment = apiService.getAllComments()
             if (response.isSuccessful) {
-                for (data in response.body()!!) {
-                    adapter.setDataForAdapter(response.body()!!, responseComment.body()!!)
+                    adapter.setDataForAdapter(response.body()!!)
                     adapterUser.setDataForAdapter(response.body()!!)
-                }
             }
         }
     }

@@ -7,100 +7,120 @@
 
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fitsSystemWindows="true">
+        android:layout_height="match_parent">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:id="@+id/clToolBar"
-            app:layout_constraintBottom_toTopOf="@id/rvUserChat"
-            app:layout_constraintTop_toBottomOf="@id/tvBackSeaceHomeScreen"
-            android:layout_height="?attr/actionBarSize"
-            tools:ignore="MissingConstraints" >
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/civAvatar"
-                android:layout_width="@dimen/_24sdp"
-                android:layout_height="@dimen/_24sdp"
-                android:layout_marginStart="@dimen/_10sdp"
-                android:src="@mipmap/ic_launcher"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+            android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/tvLabel"
+                android:id="@+id/tvBackSeaceHomeScreen"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Chats"
-                android:textSize="@dimen/_24sdp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-
+                android:drawableLeft="@drawable/back"
+                android:text="SEACE"
+                android:textSize="@dimen/_10sdp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
-
-            <ImageView
-                android:id="@+id/ivCreateChat"
-                android:src="@drawable/create"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginEnd="@dimen/_10sdp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                tools:ignore="MissingConstraints" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clToolBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_constraintTop_toBottomOf="@id/tvBackSeaceHomeScreen"
+                tools:ignore="MissingConstraints">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civAvatar"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:src="@mipmap/ic_launcher"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chats"
+                    android:textSize="@dimen/_24sdp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ivCreateChat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:src="@drawable/create"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toBottomOf="@id/clToolBar">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fitsSystemWindows="true">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvUserChat"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintBottom_toTopOf="@id/rvItemChat"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+
+                        app:layout_constraintVertical_bias="0.3"
+                        tools:ignore="MissingConstraints"
+                        tools:listitem="@layout/item_rv_user_online_in_chat" />
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvItemChat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/rvUserChat"
+                        tools:ignore="MissingConstraints"
+                        tools:layout_editor_absoluteX="28dp"
+                        tools:listitem="@layout/item_rv_home_screen_chat" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <TextView
-            android:id="@+id/tvBackSeaceHomeScreen"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/back"
-            android:text="SEACE"
-            android:textSize="@dimen/_10sdp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints" />
-
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvUserChat"
-            android:layout_width="match_parent"
-
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@id/clToolBar"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/rvItemChat"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintVertical_bias="0.3"
-            tools:ignore="MissingConstraints"
-            tools:listitem="@layout/item_rv_user_online_in_chat" />
-
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvItemChat"
-            app:layout_constraintTop_toBottomOf="@id/rvUserChat"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:orientation="vertical"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:ignore="MissingConstraints"
-            tools:listitem="@layout/item_rv_home_screen_chat" />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/navBot"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="bottom"
+            android:animateLayoutChanges="true"
+            app:layout_anchorGravity="bottom"
             app:menu="@menu/bottom_menu_chat"
             tools:ignore="MissingConstraints" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

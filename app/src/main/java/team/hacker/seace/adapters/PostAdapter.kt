@@ -16,12 +16,14 @@ import team.hacker.seace.databinding.ItemRvPostBinding
 import team.hacker.seace.fragments.home.HomeScreenSeaceFMDirections
 import team.hacker.seace.models.comments.CommentItem
 import team.hacker.seace.models.likes.LikeItem
+import team.hacker.seace.models.photoposts.PhotoPostItem
 import team.hacker.seace.models.posts.PostItem
 import team.hacker.seace.models.users.UserItem
 
 class PostAdapter: RecyclerView.Adapter<PostAdapter.PostViewHolder>() {
     private var listPosts: List<PostItem> = emptyList()
     private var listUser: List<UserItem> = emptyList()
+
     lateinit var layoutInflater:LayoutInflater
     lateinit var itemRvPostBinding: ItemRvPostBinding
     lateinit var onClickItemInRecyclerView: OnClickItemInRecyclerView
@@ -35,7 +37,9 @@ class PostAdapter: RecyclerView.Adapter<PostAdapter.PostViewHolder>() {
         }
     }
 
-    fun setDataforAdapter(listPosts: List<PostItem>,listUser: List<UserItem>){
+    fun setDataforAdapter(listPosts: List<PostItem>,
+                          listUser: List<UserItem>
+    ){
         this.listPosts = listPosts
         this.listUser = listUser
         notifyDataSetChanged()

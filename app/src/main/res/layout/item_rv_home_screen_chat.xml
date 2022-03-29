@@ -9,9 +9,7 @@
         <variable
             name="user"
             type="team.hacker.seace.models.users.UserItem" />
-        <variable
-            name="comment"
-            type="team.hacker.seace.models.comments.CommentItem" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -50,7 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="5dp"
-            android:text="@{comment.contentComment}"
+
             app:layout_constraintStart_toEndOf="@id/civAvatar"
             app:layout_constraintTop_toBottomOf="@id/tvUserName"
             tools:ignore="MissingConstraints" />
