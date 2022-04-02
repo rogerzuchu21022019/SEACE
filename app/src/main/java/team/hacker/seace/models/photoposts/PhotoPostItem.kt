@@ -1,8 +1,14 @@
 package team.hacker.seace.models.photoposts
 
+import com.google.gson.annotations.Expose
+import team.hacker.seace.models.posts.PostItem
+
 data class PhotoPostItem(
-    val Post: Any,
-    val idPhotoPost: Int,
+    val Post: PostItem,
+    @Expose
+    val idPhoto: Int,
+    @Expose
     val idPost: Int,
-    val srcPhotoPost: String
+    @Expose
+    val srcPhoto: String
 )

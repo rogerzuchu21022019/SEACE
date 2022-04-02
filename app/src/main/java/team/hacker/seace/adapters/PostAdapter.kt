@@ -1,22 +1,9 @@
 package team.hacker.seace.adapters
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.TextView
-import android.widget.Toast
-import androidx.navigation.NavController
-import androidx.navigation.NavDirections
-import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import team.hacker.seace.R
-import team.hacker.seace.databinding.ItemRvHomeScreenChatBinding
 import team.hacker.seace.databinding.ItemRvPostBinding
-import team.hacker.seace.fragments.home.HomeScreenSeaceFMDirections
-import team.hacker.seace.models.comments.CommentItem
-import team.hacker.seace.models.likes.LikeItem
-import team.hacker.seace.models.photoposts.PhotoPostItem
 import team.hacker.seace.models.posts.PostItem
 import team.hacker.seace.models.users.UserItem
 

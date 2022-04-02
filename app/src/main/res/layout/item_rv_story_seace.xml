@@ -36,7 +36,8 @@
                android:id="@+id/idContent"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:loadURL="@{user.avatar}"
+               android:loadURL="@{story.srcImage}"
+
                android:scaleType="centerCrop"
                app:layout_constraintBottom_toBottomOf="parent"
                app:layout_constraintEnd_toEndOf="parent"
@@ -51,10 +52,10 @@
                app:layout_constraintStart_toStartOf="parent"
                android:layout_width="@dimen/_16sdp"
                android:layout_height="@dimen/_16sdp"
+               android:loadURL="@{user.avatar}"
 
                android:layout_marginStart="@dimen/_10sdp"
                android:layout_marginTop="@dimen/_10sdp"
-               android:loadURL="@{story.srcImage}"
                tools:ignore="MissingConstraints" />
 
            <TextView
@@ -64,7 +65,7 @@
                app:layout_constraintBottom_toBottomOf="parent"
                android:layout_marginBottom="@dimen/_10sdp"
                android:paddingStart="@dimen/_5sdp"
-               android:text="@{user.idUser}"
+               android:text="@{story.idUser}"
                tools:ignore="MissingConstraints" />
        </androidx.constraintlayout.widget.ConstraintLayout>
 

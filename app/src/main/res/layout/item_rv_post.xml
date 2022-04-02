@@ -44,8 +44,9 @@
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/civAvatar"
                 android:layout_width="@dimen/_24sdp"
-                android:layout_height="@dimen/_24sdp"
                 android:loadURL="@{user.avatar}"
+
+                android:layout_height="@dimen/_24sdp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="MissingConstraints" />
@@ -98,7 +99,7 @@
                 android:id="@+id/ivPhoto"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_220sdp"
-                android:loadURL="@{user.avatar}"
+                android:loadListImage="@{post.photoPosts}"
                 app:layout_constraintEnd_toEndOf="parent"
 
                 app:layout_constraintStart_toStartOf="parent"

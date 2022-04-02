@@ -1,15 +1,12 @@
 package team.hacker.seace.networks
 
 import retrofit2.Response
-import retrofit2.Retrofit
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
 import retrofit2.http.POST
 import team.hacker.seace.models.comments.CommentItem
-import team.hacker.seace.models.likes.Like
 import team.hacker.seace.models.likes.LikeItem
-import team.hacker.seace.models.photoposts.PhotoPost
 import team.hacker.seace.models.photoposts.PhotoPostItem
 import team.hacker.seace.models.posts.PostItem
 import team.hacker.seace.models.stories.StoryItem

@@ -41,7 +41,6 @@ class HomeScreenSeaceFM : Fragment(), PostAdapter.OnClickItemInRecyclerView {
         getAllStories()
         initRecyclerView()
         initNavController()
-
         initNavBot()
         initClick()
         return fmHomeSeaceFmBinding.root
@@ -54,7 +53,6 @@ class HomeScreenSeaceFM : Fragment(), PostAdapter.OnClickItemInRecyclerView {
             val responseStory = apiService.getAllStories()
             val responseUser = apiService.getAllUsers()
             if (responseUser.isSuccessful) {
-
                     adapterStory.setDataForAdapter(
                         listStories = responseStory.body()!!,
                         listUsers = responseUser.body()!!
@@ -74,7 +72,6 @@ class HomeScreenSeaceFM : Fragment(), PostAdapter.OnClickItemInRecyclerView {
 
         adapterStory = StoriesInHomeScreenSeaceAdapter()
         adapterPost.setItemOnClickInRecyclerView(this)
-
 
         val decoration = DividerItemDecoration(requireContext(), DividerItemDecoration.VERTICAL)
         fmHomeSeaceFmBinding.rcvPostContent.setHasFixedSize(true)

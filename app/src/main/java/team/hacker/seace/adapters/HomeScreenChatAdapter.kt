@@ -4,10 +4,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import team.hacker.seace.databinding.ItemRvHomeScreenChatBinding
-import team.hacker.seace.models.comments.CommentItem
-import team.hacker.seace.models.likes.Like
-import team.hacker.seace.models.likes.LikeItem
-import team.hacker.seace.models.photoposts.PhotoPostItem
 import team.hacker.seace.models.users.UserItem
 
 class HomeScreenChatAdapter : RecyclerView.Adapter<HomeScreenChatAdapter.HistoryViewHolder>() {

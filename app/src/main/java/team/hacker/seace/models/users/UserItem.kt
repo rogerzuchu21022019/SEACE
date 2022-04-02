@@ -6,13 +6,21 @@ import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
 import com.google.gson.annotations.Expose
 import kotlinx.parcelize.Parcelize
+import team.hacker.seace.models.comments.CommentItem
+import team.hacker.seace.models.likes.LikeItem
+import team.hacker.seace.models.posts.PostItem
+import team.hacker.seace.models.stories.StoryItem
 import java.io.Serializable
 
 data class UserItem(
-    val Comments: List<Any>,
-    val Likes: List<Any>,
-    val Posts: List<Any>,
-    val Stories: List<Any>,
+    @Expose
+    val Comments: List<CommentItem>,
+    @Expose
+    val Likes: List<LikeItem>,
+    @Expose
+    val Posts: List<PostItem>,
+    @Expose
+    val Stories: List<StoryItem>,
     @Expose
     val address: String,
     @Expose

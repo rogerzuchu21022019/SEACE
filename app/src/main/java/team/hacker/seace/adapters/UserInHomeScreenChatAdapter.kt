@@ -22,7 +22,6 @@ class UserInHomeScreenChatAdapter :
                     onItemClickInRecyclerView.onItemClick(adapterPosition,itemRvUserOnlineInChatBinding)
                 }
                 onItemClickInRecyclerView.onItemClick(adapterPosition,itemRvUserOnlineInChatBinding)
-
             }
     }
 
